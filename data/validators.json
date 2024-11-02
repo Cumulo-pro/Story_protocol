@@ -389,5 +389,21 @@
       "Valley Of Story by Grand Valley": "https://github.com/hubofvalley/Testnet-Guides/blob/main/Story%20Protocol/resources/story_validator_node_install_odyssey.sh",
       "Grafana Story Protocol Public Monitoring": "https://grafana-monitor.grandvalleys.com/d/story-test-public/grand-valley-public-story-monitoring-dashboard?orgId=1&refresh=5s"
     }
+  },
+  {
+    "name": "BlockHub",
+    "webservices": "",
+    "x": "blockchainshub",
+    "validatorlogo": "blockhub.png",
+    "api": "https://og-testnet-api.blockhub.id",
+    "rpc": "https://og-testnet-rpc.blockhub.id",
+    "evm-rpc": "https://og-testnet-jsonrpc.blockhub.id",
+    "wss_cosmos": "wss://story-testnet-rpc.blockhub.id/websocket",
+    "wss_evm": "wss://story-testnet-wss.blockhub.id",
+    "snapshot": "",
+    "tools": "Story Node Dashboard. Easy node installation and management tool",
+    "tools_url": {
+      "Story Node Dashboard": "https://github.com/BlockchainsHub/Testnet/blob/main/Story/dashboard.md"
+    }
   }
 ]
