@@ -389,5 +389,20 @@
       "Valley Of Story by Grand Valley": "https://github.com/hubofvalley/Testnet-Guides/blob/main/Story%20Protocol/resources/story_validator_node_install_odyssey.sh",
       "Grafana Story Protocol Public Monitoring": "https://grafana-monitor.grandvalleys.com/d/story-test-public/grand-valley-public-story-monitoring-dashboard?orgId=1&refresh=5s"
     }
+  },
+    {
+    "name": "StraiveVN",
+    "webservices": "https://www.straive.com/",
+    "x": "Trongbtc",
+    "validatorlogo": "StraiveVN.PNG",
+    "addrbook": "",
+    "explorer": "",
+    "peers": "88dad3e6443440d6a34483a4ab7555d2cc2489e1@202.61.192.167:26656",
+    "rpc": "https://rpc-story.ongtrong.xyz",
+    "api": "https://api-story.ongtrong.xyz",
+    "evm-rpc": "https://evm-rpc-story.ongtrong.xyz",
+    "wss_cosmos": "wss://rpc-story.ongtrong.xyz/websocket",
+    "wss_evm": "wss://wss-story.ongtrong.xyz",
+    }
   }
 ]
