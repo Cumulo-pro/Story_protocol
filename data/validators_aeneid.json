@@ -113,8 +113,7 @@
     "rpc": "https://story-testnet-rpc.mictonode.com/",
     "wss_cosmos": "wss://story-testnet-rpc.mictonode.com/websocket",
     "api": "https://story-testnet-api.mictonode.com/",
-    "grpc": "xrpl-testnet-grpc.mictonode.com:22090",
-    "websocket": "wss://xrpl-testnet-evmrpc-wss.mictonode.com",
+    "websocket": "wss://story-testnet-ws-evm-rpc.mictonode.com",
     "evm": "https://story-testnet-evm-rpc.mictonode.com/",
     "snapshot": "https://services.mictonode.com/story-aeneid/snapshot",
     "content": {
