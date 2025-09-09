@@ -175,9 +175,12 @@
     "api": "https://story-api.cosmicvalidator.com",
     "rpc": "https://story-rpc.cosmicvalidator.com",
     "snapshot": "https://story-mainnet.cosmicvalidator.com",
-     "addrbook": "",
+     "addrbook": "https://story-mainnet.cosmicvalidator.com/story/mainnet/addrbook.json",
      "wss_evm": "wss://story-evm-wss.cosmicvalidator.com",
-     "wss_cosmos": "wss://story-rpc.cosmicvalidator.com/websocket"
+     "wss_cosmos": "wss://story-rpc.cosmicvalidator.com/websocket",
+     "tools_url": {
+       "State-sync": "https://github.com/CosmicValidator/Story-Mainnet/tree/main?tab=readme-ov-file#state-sync"
+      }
     },
    {
     "name": "Nodefleet",
