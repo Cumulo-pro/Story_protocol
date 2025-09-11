@@ -337,17 +337,21 @@
   },
     {
         "name": "Krews",
-        "webservices": "",
+        "webservices": "https://story-dashboard.krews.xyz/story-aeneid",
         "x": "Krewstake",
         "validatorlogo": "krews.jpg",
         "github": "",
-        "rpc": "",
-        "api": "",
+        "rpc": "https://story-aeneid-rpc.krews.xyz",
+        "evm": "https://aeneid-evm-rpc.krews.xyz",
+        "api": "https://story-aeneid-api.krews.xyz",
+        "wss_evm":"wss://story-aeneid-ws-evm.krews.xyz",
+        "wss_cosmos": "wss://story-aeneid-rpc.krews.xyz/websocket",
         "grpc": "",
         "snapshot": "https://story-dashboard.krews.xyz/story-aeneid/snapshots",
         "tools": "validator performance dashboard",
         "tools_url": {
-            "validator performance dashboard": "https://story-dashboard.krews.xyz/?network=story_aeneid&year=2025&week=30&sortBy=signed_blocks&dir=desc"
+            "validator performance dashboard": "https://story-dashboard.krews.xyz/story-aeneid/validator-status",
+            "Decentralization Map": "https://story-dashboard.krews.xyz/story-aeneid/decentralization"
         }
     },
     {
