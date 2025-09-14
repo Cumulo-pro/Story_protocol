@@ -197,16 +197,20 @@
     },
     {
         "name": "Krews",
-        "webservices": "",
+        "webservices": "https://story-dashboard.krews.xyz/story",
         "x": "Krewstake",
         "validatorlogo": "krews.jpg",
         "github": "",
-        "rpc": "",
-        "api": "",
+        "rpc": "https://story-rpc.krews.xyz",
+        "evm": "https://story-evm-rpc.krews.xyz",
+        "api": "https://story-api.krews.xyz",
+        "wss_evm":"wss://story-ws-evm.krews.xyz",
+        "wss_cosmos": "wss://story-rpc.krews.xyz/websocket",
         "grpc": "",
         "snapshot": "https://story-dashboard.krews.xyz/story/snapshots",
         "tools_url": {
-            "validator performance dashboard": "https://story-dashboard.krews.xyz/story/validator-status"
+            "Validator Performance Dashboard": "https://story-dashboard.krews.xyz/story/validator-status",
+            "Decentralization Map": "https://story-dashboard.krews.xyz/story/decentralization"
         }
     },
   {
