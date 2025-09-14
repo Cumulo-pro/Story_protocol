@@ -73,7 +73,7 @@
     "api": "https://lightnode-api-story.grandvalleys.com",
     "rpc": "https://lightnode-rpc-story.grandvalleys.com",
     "snapshot": "https://pruned-snapshot-testnet-story.grandvalleys.com",
-    "evm": "https://lightnode-json-rpc-mainnet-story.grandvalleys.com",
+    "evm": "https://lightnode-json-rpc-story.grandvalleys.com",
     "wss_cosmos": "wss://lightnode-rpc-story.grandvalleys.com/websocket",
     "wss_evm": "wss://lightnode-wss-story.grandvalleys.com",
     "peers": "7e311e22cff1a0d39c3758e342fa4c2ee1aea461@peer-story.grandvalleys.com:28656",
