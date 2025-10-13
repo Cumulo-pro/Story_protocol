@@ -232,7 +232,8 @@
     "Validators Performance Dashboard": "https://itrocket.net/services/mainnet/story/analytics/validators-performance/?mode=full&range=last3months",
     "Public RPC scanner": "https://itrocket.net/services/mainnet/story/public-rpc/",
     "Node & Validator Monitoring Script": "https://itrocket.net/services/mainnet/story/monitoring/",
-    "ITRocket Community Tab for Story Testnet & Mainnet": "https://itrocket.net/services/mainnet/story/community/useful-tools/"
+    "ITRocket Community Tab for Story Testnet & Mainnet": "https://itrocket.net/services/mainnet/story/community/useful-tools/",
+    "Validator Monitoring Bot": "https://t.me/story_itrocket_bot"
     },
     "content": {
         "Installation Guide": "https://itrocket.net/services/mainnet/story/installation/"
