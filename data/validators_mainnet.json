@@ -238,6 +238,18 @@
         "Installation Guide": "https://itrocket.net/services/mainnet/story/installation/"
     }
   },
+    {
+    "name": "Endorphine Stake",
+    "webservices": "",
+    "x": "endorphinestake",
+    "validatorlogo": "endorphinestake.jpg",
+    "evm": "",
+    "api": "",
+    "rpc": "",
+    "tools_url": {
+          "Buzznodes is an innovation among validator monitoring tools": "https://story.buzznodes.com/"
+       }
+    },
    {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/services/story/",
