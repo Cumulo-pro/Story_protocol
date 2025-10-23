@@ -251,6 +251,26 @@
           "Buzznodes is an innovation among validator monitoring tools": "https://story.buzznodes.com/"
        }
     },
+    {
+    "name": "TTT VN",
+    "webservices": "https://services.tienthuattoan.com/mainnet/story",
+    "x": "TTTcapital",
+    "validatorlogo": "tttcapital.jpg",
+    "explorer": "",
+    "peers": "https://services.tienthuattoan.com/mainnet/story/peers-seeds",
+    "seeds": "https://services.tienthuattoan.com/mainnet/story/peers-seeds",
+    "api": "m",
+    "rpc": "",
+    "grpc": "",
+     "snapshot": "https://services.tienthuattoan.com/mainnet/story/snapshot",
+    "tools_url": {
+        "Decentralization Map": "https://services.tienthuattoan.com/mainnet/story/map",
+         "State-sync": "https://services.tienthuattoan.com/mainnet/story/state-sync"
+      }
+    },
+   "content": {
+        "Installation Guide": "https://services.tienthuattoan.com/mainnet/story/installation"
+    }
    {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/services/story/",
