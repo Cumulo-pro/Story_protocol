@@ -1,4 +1,14 @@
 [
+   {
+    "name": "Nodes.Guru",
+    "webservices": "",
+    "x": "NodesGuru",
+    "validatorlogo": "nodesguru.png",
+    "explorer": "https://story.explorers.guru/",
+    "api": "",
+    "rpc": "",
+    "grpc": ""
+},
   {
     "name": "Oneiric Stake",
     "webservices": "",
