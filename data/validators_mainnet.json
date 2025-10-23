@@ -239,6 +239,22 @@
         "Installation Guide": "https://itrocket.net/services/mainnet/story/installation/"
     }
   },
+   {
+    "name": "OriginStake",
+    "webservices": "",
+    "x": "OriginStake",
+    "validatorlogo": "originstake.jpeg",
+    "api": "",
+    "rpc": "",
+    "grpc": "",
+    "evm": "",
+    "wss_cosmos": "",
+    "wss_evm": "",
+     "tools_url": {
+          "ipworld dashboard": "https://ipworld.io/"
+       }
+    },
+  },
     {
     "name": "Endorphine Stake",
     "webservices": "",
