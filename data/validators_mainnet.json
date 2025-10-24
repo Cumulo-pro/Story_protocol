@@ -297,6 +297,24 @@
       }
    },
    {
+  "name": "F5 Nodes",
+  "webservices": "",
+  "x": "f5nodes",
+  "validatorlogo": "f5nodes.jpg",
+  "peers": "",
+  "seeds": "",
+  "api": "",
+  "rpc": "",
+  "grpc": "",
+  "archive_snapshot": "",
+  "snapshot": "",
+  "addrbook": "",
+  "tools_url": {
+  "Story Wiki": "https://wiki.f5nodes.com/story/",
+   "Story Endpoints Ninja" : "https://story.endpoints.ninja/"
+  }
+},
+   {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/services/story/",
     "x": "Cumulo_pro",
