@@ -118,7 +118,10 @@
     "evm": "https://lightnode-json-rpc-mainnet-story.grandvalleys.com",
     "wss_cosmos": "wss://lightnode-rpc-mainnet-story.grandvalleys.com/websocket",
     "wss_evm": "wss://lightnode-wss-mainnet-story.grandvalleys.com",
-    "snapshot": ""
+    "snapshot": "",
+    "content": {
+      "Mainnet Guide": "https://github.com/hubofvalley/Mainnet-Guides/tree/main/Story"
+    }
    },
   {
     "name": "pro-nodes75",
