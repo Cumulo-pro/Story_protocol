@@ -425,7 +425,8 @@ Value: memory allocated by the system.
 ## Process Memory in Use  
 
 *cosmos_runtime_alloc_bytes*  
-![image](https://github.com/user-attachments/assets/2ea5b809-71d2-42b3-ab57-fc5952f9401c)
+![image](https://github.com/user-attachments/assets/2ea5b809-71d2-42b3-ab57-fc5952f9401c)  
+
 ______________________________________________________________________-
 
 # Consensus & Validator Metrics
