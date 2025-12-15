@@ -426,6 +426,189 @@ Value: memory allocated by the system.
 
 *cosmos_runtime_alloc_bytes*  
 
+______________________________________________________________________-
+
+# Consensus & Validator Metrics
+
+This section documents the main **consensus health** and **validator performance** metrics exposed by Story nodes and visualized in Grafana.
+
+---
+
+## Precommits Counted
+
+**Metric name:**  
+`cometbft_consensus_precommits_counted`
+
+**Description:**  
+Total number of precommit votes processed by the consensus engine.
+
+This metric reflects the volume of precommit messages successfully handled during consensus rounds. It provides a low-level view of consensus activity and message throughput.
+
+**PromQL example:**
+```promql
+rate(cometbft_consensus_precommits_counted{job="$job"}[5m])
+```
+
+---
+
+## Blocks Proposed (24h)
+
+**Metric name:**  
+`cometbft_consensus_proposal_create_count`
+
+**Description:**  
+Number of blocks proposed by this node during the last 24 hours.
+
+This metric counts how often the node acted as a block proposer within the network.
+
+**PromQL:**
+```promql
+increase(cometbft_consensus_proposal_create_count{job="$job"}[24h])
+```
+
+---
+
+## Proposal Create Count
+
+**Metric name:**  
+`cometbft_consensus_proposal_create_count`
+
+**Description:**  
+Cumulative counter of block proposals created by the node since startup.
+
+**PromQL:**
+```promql
+rate(cometbft_consensus_proposal_create_count{job="$job"}[1h])
+```
+
+---
+
+## Consensus Voting Power Participation (%)
+
+**Metric name:**  
+`cometbft_consensus_round_voting_power_percent`
+
+**Description:**  
+Percentage of total network voting power participating in consensus rounds, measured separately for **prevote** and **precommit** phases.
+
+The metric is reported on a **0–1 scale** and displayed as a percentage.
+
+**PromQL:**
+```promql
+max by (vote_type) (
+  avg_over_time(cometbft_consensus_round_voting_power_percent{job="$job"}[10m])
+)
+```
+
+---
+
+## % Staking in Precommits
+
+**Metric name:**  
+`cometbft_consensus_precommits_staking_percentage`
+
+**Description:**  
+Percentage of total network stake represented in precommit votes.
+
+**PromQL:**
+```promql
+avg_over_time(
+  cometbft_consensus_precommits_staking_percentage{job="$job"}[10m]
+)
+```
+
+---
+
+## Validator Last Signed Height
+
+**Metric name:**  
+`cometbft_consensus_validator_last_signed_height`
+
+**Description:**  
+Block height of the most recent block signed by the validator.
+
+**PromQL:**
+```promql
+max(cometbft_consensus_validator_last_signed_height{job="$job"})
+```
+
+---
+
+## Missed Blocks (last 24h)
+
+**Metric name:**  
+`cometbft_consensus_validator_missed_blocks`
+
+**Description:**  
+Number of blocks missed by the validator over a given time window.
+
+**PromQL:**
+```promql
+increase(
+  cometbft_consensus_validator_missed_blocks{job="$job"}[24h]
+)
+```
+
+---
+
+## Consensus Health (Rounds & Timing)
+
+This group of metrics provides insight into **consensus efficiency, latency, and stability**.
+
+---
+
+### Round Duration (avg / p95)
+
+**Metric name:**  
+`cometbft_consensus_round_duration_seconds`
+
+**Description:**  
+Time taken to complete consensus rounds.
+
+**PromQL (avg):**
+```promql
+sum(rate(cometbft_consensus_round_duration_seconds_sum{job="$job"}[5m]))
+/
+sum(rate(cometbft_consensus_round_duration_seconds_count{job="$job"}[5m]))
+```
+
+**PromQL (p95):**
+```promql
+histogram_quantile(
+  0.95,
+  sum by (le) (
+    rate(cometbft_consensus_round_duration_seconds_bucket{job="$job"}[5m])
+  )
+)
+```
+
+---
+
+### Block Interval (avg / p95)
+
+**Metric name:**  
+`cometbft_consensus_block_interval_seconds`
+
+**Description:**  
+Time interval between consecutive blocks.
+
+**PromQL (avg):**
+```promql
+sum(rate(cometbft_consensus_block_interval_seconds_sum{job="$job"}[5m]))
+/
+sum(rate(cometbft_consensus_block_interval_seconds_count{job="$job"}[5m]))
+```
+
+**PromQL (p95):**
+```promql
+histogram_quantile(
+  0.95,
+  sum by (le) (
+    rate(cometbft_consensus_block_interval_seconds_bucket{job="$job"}[5m])
+  )
+)
+```
+
 This metric indicates how many bytes of memory the process is currently using. It is essential for monitoring the node's memory usage, as a significant increase could affect its performance and stability. The metric helps to detect potential problems related to memory management, which can lead to optimisation of system resource usage.  
 Value: amount of memory allocated and still in use in the process.  
 ![image](https://github.com/user-attachments/assets/2ea5b809-71d2-42b3-ab57-fc5952f9401c)
