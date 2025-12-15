@@ -425,7 +425,7 @@ Value: memory allocated by the system.
 ## Process Memory in Use  
 
 *cosmos_runtime_alloc_bytes*  
-
+![image](https://github.com/user-attachments/assets/2ea5b809-71d2-42b3-ab57-fc5952f9401c)
 ______________________________________________________________________-
 
 # Consensus & Validator Metrics
@@ -611,5 +611,5 @@ histogram_quantile(
 
 This metric indicates how many bytes of memory the process is currently using. It is essential for monitoring the node's memory usage, as a significant increase could affect its performance and stability. The metric helps to detect potential problems related to memory management, which can lead to optimisation of system resource usage.  
 Value: amount of memory allocated and still in use in the process.  
-![image](https://github.com/user-attachments/assets/2ea5b809-71d2-42b3-ab57-fc5952f9401c)
+
 
