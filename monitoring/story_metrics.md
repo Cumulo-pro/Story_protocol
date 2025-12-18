@@ -469,20 +469,6 @@ increase(cometbft_consensus_proposal_create_count{job="$job"}[24h])
 
 ---
 
-## Proposal Create Count
-
-**Metric name:**  
-`cometbft_consensus_proposal_create_count`
-
-**Description:**  
-Cumulative counter of block proposals created by the node since startup.
-
-**PromQL:**
-```promql
-rate(cometbft_consensus_proposal_create_count{job="$job"}[1h])
-```
-
----
 
 ## Consensus Voting Power Participation (%)
 
