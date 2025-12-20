@@ -489,22 +489,7 @@ max by (vote_type) (
 
 ---
 
-## % Staking in Precommits
 
-**Metric name:**  
-`cometbft_consensus_precommits_staking_percentage`
-
-**Description:**  
-Percentage of total network stake represented in precommit votes.
-
-**PromQL:**
-```promql
-avg_over_time(
-  cometbft_consensus_precommits_staking_percentage{job="$job"}[10m]
-)
-```
-
----
 
 ## Validator Last Signed Height
 
