@@ -568,7 +568,10 @@ histogram_quantile(
 `cometbft_consensus_block_interval_seconds`
 
 **Description:**  
-Time interval between consecutive blocks.
+Measures the time interval between consecutive blocks produced by the network.
+
+The average value represents the typical block production cadence, while the p95 highlights slow blocks and irregular block production.  
+Increased block intervals usually indicate delayed consensus finalization, often caused by network latency, validator participation issues, or multiple consensus round retries.
 
 **PromQL (avg):**
 ```promql
@@ -587,7 +590,5 @@ histogram_quantile(
 )
 ```
 
-This metric indicates how many bytes of memory the process is currently using. It is essential for monitoring the node's memory usage, as a significant increase could affect its performance and stability. The metric helps to detect potential problems related to memory management, which can lead to optimisation of system resource usage.  
-Value: amount of memory allocated and still in use in the process.  
 
 
