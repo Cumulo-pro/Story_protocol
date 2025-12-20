@@ -535,7 +535,13 @@ This group of metrics provides insight into **consensus efficiency, latency, and
 `cometbft_consensus_round_duration_seconds`
 
 **Description:**  
-Time taken to complete consensus rounds.
+Measures the time required to complete consensus rounds in CometBFT.
+
+A consensus round includes the proposal, prevote, and precommit phases required to finalize a block.  
+The average value represents typical round duration, while the p95 highlights slow or problematic rounds.
+
+Increased round durations usually indicate network latency, delayed validator participation, or multiple round retries.
+
 
 **PromQL (avg):**
 ```promql
