@@ -10,14 +10,6 @@ Operator-oriented reference for **all panels** included in the Story Grafana das
 
 ## Overview – Network & Consensus
 
-### Untitled
-
-_No panel description in Grafana._
-
-*(Text panel — no PromQL.)*
-
----
-
 ### Sync Status 
 
 Indicates whether the node is currently syncing blocks.
