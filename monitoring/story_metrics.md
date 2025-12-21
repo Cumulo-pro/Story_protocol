@@ -2,10 +2,6 @@
 
 Operator-oriented reference for **all panels** included in the Story Grafana dashboard JSON.
 
-- Images removed
-- Ordered by dashboard rows
-- Includes the **exact PromQL** configured in Grafana
-
 ---
 
 ## Overview – Network & Consensus
