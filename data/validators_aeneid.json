@@ -394,7 +394,10 @@
     "tools_url": {
        "StoryProtocol Network Monitor": "https://geo.story.encipher88.tech",
        "Grafana oneline script": "https://github.com/encipher88/story-grafana"
-      }
+      },
+    "content": {
+      "How to Install Grafana Dashboard for Story Network - A Beginner’s Guide": "https://medium.com/@encipher/how-to-install-grafana-dashboard-for-story-network-a-beginners-guide-700269e3290c"
+      }  
     },
      {
     "name": "shachopra",
