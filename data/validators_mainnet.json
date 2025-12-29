@@ -319,6 +319,19 @@
         "Installation Guide": "https://services.tienthuattoan.com/mainnet/story/installation"
       }
    },
+     {
+  "name": "Stakely",
+  "webservices": "https://stakely.io/",
+  "x": "Stakely_io",
+  "validatorlogo": "stakely.jpg",
+  "evm": "https://story-json-rpc.stakely.io",
+  "rpc": "https://story-rpc.stakely.io",
+  "grpc": "",
+  "tools_url": {
+  "Story Faucet": "https://stakely.io/es/faucet/story-ip",
+  "Node as a service": "https://app.stakely.io/naas?protocol=STORY"
+  }
+},
    {
   "name": "F5 Nodes",
   "webservices": "",
