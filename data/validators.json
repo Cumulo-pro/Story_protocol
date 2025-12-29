@@ -318,8 +318,14 @@
     "snapshot": "",
     "tools": "API",
     "tools_url": {
-      "API": "https://api-story-testnet.trusted-point.com/"
-    }
+      "API": "https://api-story-testnet.trusted-point.com/",
+      "Rich Consensus Dashboard": "https://github.com/trusted-point/Rich-Consensus",
+      "Story Consensus Upgrade Metrics": "https://github.com/trusted-point/Story-Consensus-Metrics",
+      "Story REST API": "https://github.com/trusted-point/Story-Rest-API"
+    },
+    "content": {
+       "Story Validator Tools & Operations Guide": "https://github.com/trusted-point/Story-Tools"
+     }
   },
   {
     "name": "Pro-Nodes75",
