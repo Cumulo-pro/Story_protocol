@@ -182,18 +182,16 @@
     }
   },
     {
-    "name": "NODERS",
-    "webservices": "",
+     "name": "NODERS",
+    "webservices": "https://noders.services/mainnet/story/",
     "x": "NODERS_TEAM",
     "validatorlogo": "noders.jpg",
     "explorer": "https://ipstoryhub.org/explorer/dashboard",
-    "peers": "",
-    "seeds": "",
-    "api": "",
-    "rpc": "",
-    "grpc": "",
-    "snapshot": "",
-    "addrbook": "",
+     "peers": "",
+     "seeds": "",
+     "api": "https://story-api.noders.services",
+     "rpc": "https://story-rpc.noders.services",
+     "evm": "https://story-jsonrpc.noders.services",
     "tools_url": {
         "Ecosystem Projects": "https://ipstoryhub.org/ecosystem",
         "RPC List": "https://ipstoryhub.org/resources/rpc-list"
