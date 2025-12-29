@@ -131,29 +131,7 @@
       "guide": "https://service.josephtran.xyz/testnet/story/installation"
     }
   },
-  {
-    "name": "Cumulo",
-    "webservices": "https://cumulo.pro/story/",
-    "x": "Cumulo_pro",
-    "validatorlogo": "cumulo.jpg",
-    "explorer": "",
-    "peers": "",
-    "seeds": "",
-    "api": "",
-    "rpc": "https://story-testnet-rpc.cumulo.me",
-    "grpc": "",
-    "evm-rpc": "https://story-testnet-evm.cumulo.me",
-    "wss_cosmos": "wss://story-testnet-rpc.cumulo.me/websocket",
-    "wss_evm": "wss://story-testnet-wss.cumulo.me",
-    "snapshot": "",
-    "addrbook": "",
-    "tools": "Story Front-Chain Dashboard, Story Metrics and Grafana Dashboard",
-    "tools_url": {
-      "Story Front-Chain Dashboard": "https://story.frontchain.cumulo.pro/",
-      "Story Metrics and Grafana Dashboard": "https://github.com/Cumulo-pro/Story_protocol/blob/main/monitoring/"
-    }
-  },
-  {
+ {
     "name": "Endorphine Stake",
     "webservices": "",
     "x": "endorphinestake",
@@ -577,6 +555,51 @@
       "IP Graph Explorer": "https://graph-story.app",
       "Story Installer": "https://github.com/DTEAMTECH/story-installer",
       "Chat GPT Plugin": "https://chatgpt.com/g/g-673b6f19371481919fe8b41d62d0d83d-story-protocol-assistant-by-dteam"
+    }
+  },
+   {
+    "name": "NODERS",
+    "webservices": "https://noders.services/mainnet/story/",
+    "x": "NODERS_TEAM",
+    "validatorlogo": "noders.jpg",
+    "explorer": "https://ipstoryhub.org/explorer/dashboard",
+     "peers": "",
+     "seeds": "",
+     "api": "https://story-api.noders.services",
+     "rpc": "https://story-rpc.noders.services",
+     "evm": "https://story-jsonrpc.noders.services",
+     "addrbook": "https://noders.services/testnet-networks/story/seeds-and-peers#address-book",
+     "snapshot": "https://noders.services/mainnet/story/snapshot",
+     "evm": "https://story-t-jsonrpc.noders.services",
+     "content": {
+        "Installation Guide": "https://noders.services/mainnet/story/install"
+    },
+    "tools_url": {
+       "CommunityApp": "https://ipstoryhub.org/",
+       "State Sync": "https://noders.services/mainnet/story/statesync",
+       "Story Monitoring Setup": "https://noders.services/mainnet/story/monitoring"
+    }    
+  },
+   {
+    "name": "Cumulo",
+    "webservices": "https://cumulo.pro/services/story/",
+    "x": "Cumulo_pro",
+    "validatorlogo": "cumulo.jpg",
+    "explorer": "",
+    "peers": "https://cumulo.pro/services/story/conect.php#live-peers",
+    "seeds": "",
+    "api": "",
+    "rpc": "https://rpc.story.cumulo.me",
+    "grpc": "grpc.story.cumulo.me",
+    "evm-rpc": "https://evm.story.cumulo.me",
+    "wss_cosmos": "wss://evm-story.cumulo.org.es",
+    "wss_evm": "wss://story-testnet-wss.cumulo.me",
+    "snapshot": "",
+    "addrbook": "",
+    "tools": "Story Front-Chain Dashboard, Story Metrics and Grafana Dashboard",
+    "tools_url": {
+      "EndPoint Scan": "https://cumulo.pro/services/story/rpcscan",
+      "Story Metrics and Grafana Dashboard": "https://cumulo.pro/services/story/monitoring"
     }
   }
 ]
