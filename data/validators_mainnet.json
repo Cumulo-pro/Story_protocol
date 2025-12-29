@@ -351,6 +351,23 @@
   }
 },
    {
+    "name": "Lavender.Five Nodes",
+    "webservices": "https://www.lavenderfive.com/networks/story",
+    "x": "lavender_five",
+    "validatorlogo": "lavenderfive.jpg",
+    "api": "https://rest.lavenderfive.com:443/story/",
+    "rpc": "https://rpc.lavenderfive.com:443/story/",
+    "grpc": "story.lavenderfive.com:443/",
+    "snapshot": "",
+    "evm": "https://jsonrpc.lavenderfive.com:443/story/",
+    "tools_url": {
+        "State-sync" :""
+     },
+   "content":{
+    "RPC Guide - Learn how to interact with our endpoints": "https://www.lavenderfive.com/tools/story/rpc"
+  }
+},
+   {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/services/story/",
     "x": "Cumulo_pro",
