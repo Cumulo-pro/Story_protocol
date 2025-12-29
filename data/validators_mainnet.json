@@ -192,10 +192,14 @@
      "api": "https://story-api.noders.services",
      "rpc": "https://story-rpc.noders.services",
      "evm": "https://story-jsonrpc.noders.services",
+    "content": {
+        "Installation Guide": "https://noders.services/mainnet/story/install"
+    },
     "tools_url": {
-        "Ecosystem Projects": "https://ipstoryhub.org/ecosystem",
-        "RPC List": "https://ipstoryhub.org/resources/rpc-list"
-    }       
+       "CommunityApp": "https://ipstoryhub.org/",
+       "State Sync": "https://noders.services/mainnet/story/statesync",
+       "Story Monitoring Setup": "https://noders.services/mainnet/story/monitoring"
+    }      
   },
     {
     "name": "Cosmic Validator",
