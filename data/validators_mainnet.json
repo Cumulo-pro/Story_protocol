@@ -412,6 +412,24 @@
       "State-sync": "https://www.synergynodes.com/service/story"
     }
 },
+     {
+    "name": "Blockhunters",
+    "webservices": "https://blockhunters.dev/mainnet/story",
+    "x": "BlockhuntersOrg"
+    "validatorlogo": "blockhunters.jpg",
+    "explorer": "https://scan.bh.rocks/story",
+    "seeds": "",
+    "snapshot": "https://blockhunters.dev/mainnet/story/snapshot"
+    "api": "https://api.story.bh.rocks:443",
+    "rpc": "https://rpc.story.bh.rocks:443",
+    "evm": "https://evm.story.bh.rocks:443",
+   "tools_url": {
+      "State Sync": "https://blockhunters.dev/mainnet/story/state-sync"
+    },
+    "content": {
+       "Manual Instalation": "https://blockhunters.dev/mainnet/story/install"
+     }
+},
  {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/services/story/",
