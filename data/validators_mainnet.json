@@ -367,6 +367,32 @@
     "RPC Guide - Learn how to interact with our endpoints": "https://www.lavenderfive.com/tools/story/rpc"
   }
 },
+     {
+    "name": "TrustedPoint",
+    "webservices": "",
+    "x": "Trusted_Point",
+    "validatorlogo": "trustedpoint.jpg",
+    "addrbook": "",
+    "explorer": "",
+    "peers": "",
+    "rpc": "https://rpc-story-testnet.trusted-point.com/",
+    "api": "https://api-story-testnet.trusted-point.com/",
+    "evm-rpc": "",
+    "wss_cosmos": "",
+    "wss_evm": "",
+    "grpc": "",
+    "snapshot": "",
+    "tools": "API",
+    "tools_url": {
+      "API": "https://api-story-testnet.trusted-point.com/",
+      "Rich Consensus Dashboard": "https://github.com/trusted-point/Rich-Consensus",
+      "Story Consensus Upgrade Metrics": "https://github.com/trusted-point/Story-Consensus-Metrics",
+      "Story REST API": "https://github.com/trusted-point/Story-Rest-API"
+    },
+    "content": {
+       "Story Validator Tools & Operations Guide": "https://github.com/trusted-point/Story-Tools"
+     }
+  },
    {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/services/story/",
