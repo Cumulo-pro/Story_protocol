@@ -580,6 +580,20 @@
        "Story Monitoring Setup": "https://noders.services/mainnet/story/monitoring"
     }    
   },
+ {
+  "name": "cryptomolot",
+  "webservices": "https://cryptomolot.gitbook.io/cryptomolot-docs/mainnets/story-protocol",
+  "x": "cryptomolot",
+  "validatorlogo": "cryptomolot.jpg",
+  "tools": "Monitoring tool",
+  "tools_url": {
+    "Monitoring tool": "https://cryptomolot.gitbook.io/cryptomolot-docs/mainnets/story-protocol/monitoring-tool"
+  },
+  "content":{
+    "Installation Guide": "https://cryptomolot.gitbook.io/cryptomolot-docs/mainnets/story-protocol",
+    "Cheatsheet": "https://cryptomolot.gitbook.io/cryptomolot-docs/mainnets/story-protocol/cheatsheet"
+  }
+},
    {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/services/story/",
