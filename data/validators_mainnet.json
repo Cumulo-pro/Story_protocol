@@ -26,7 +26,8 @@
     "Manual upgrade": "https://storyscan.app/labs?page=upgrade"
      },
      "tools_url": {
-        "Story testnet Labs": "https://storyscan.app/labs"
+        "Story Labs": "https://storyscan.app/labs",
+        "StoryAI": "https://storyscan.app/?lumi=true"
     }
   },
   {
