@@ -9,6 +9,26 @@
     "rpc": "",
     "grpc": ""
 },
+    {
+    "name": "STAKEME",
+    "webservices": "",
+    "x": "stakeme_pro",
+    "validatorlogo": "stakeme.jpg",
+    "explorer": "https://storyscan.app/",
+    "snapshot": "https://storyscan.app/labs?page=snapshots",
+    "peers": "ee5386dd25b97cba63234f8a76aca9b6dcb3f157@story-peer.stakeme.pro:26656",
+    "seeds": "c1d973eea1b2c637777ab32783b3d37f2b52ba36@b1.storyrpc.io:52656",
+     "api": "https://story-rest.stakeme.pro",
+    "rpc": "https://story-rpc.stakeme.pro",
+    "evm": "https://story-evm-rpc.stakeme.pro:443",
+    "content":{
+    "Installation Guide": "https://storyscan.app/labs?page=installation",
+    "Manual upgrade": "https://storyscan.app/labs?page=upgrade"
+     },
+     "tools_url": {
+        "Story testnet Labs": "https://storyscan.app/labs"
+    }
+  },
   {
     "name": "Oneiric Stake",
     "webservices": "",
