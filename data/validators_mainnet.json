@@ -396,6 +396,22 @@
        "Story Validator Tools & Operations Guide": "https://github.com/trusted-point/Story-Tools"
      }
   },
+    {
+    "name": "Synergynodes",
+    "webservices": "https://www.synergynodes.com/service/story",
+    "x": "SynergyNodes",
+    "validatorlogo": "synergynodes.png",
+    "explorer": "",
+    "seeds": "eac3611a167e7b621e267e3282c2cbf3feb56e59@story-seed.synergynodes.com:26656",
+    "snapshot": "https://www.synergynodes.com/service/story"
+    "api": "https://story-api.synergynodes.com/",
+    "rpc": "https://story-rpc.synergynodes.com/",
+    "evm": "https://story-evm.synergynodes.com/",
+   "tools_url": {
+      "Bech32 Tool": "https://tools.synergynodes.com",
+      "State-sync": "https://www.synergynodes.com/service/story"
+    }
+},
  {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/services/story/",
