@@ -412,7 +412,7 @@
       "State-sync": "https://www.synergynodes.com/service/story"
     }
 },
-     {
+  {
     "name": "Blockhunters",
     "webservices": "https://blockhunters.dev/mainnet/story",
     "x": "BlockhuntersOrg",
@@ -429,6 +429,22 @@
     "content": {
        "Manual Instalation": "https://blockhunters.dev/mainnet/story/install"
      }
+},
+    {
+    "name": "DeSpread Labs",
+    "webservices": "",
+    "x": "DeSpreadLabs",
+    "validatorlogo": "despreadlabs.jpg",
+    "explorer": "https://vp.despreadlabs.io/explorer/mainnet/story",
+    "seeds": "",
+    "snapshot": "https://vp.despreadlabs.io/explorer/service/snapshot/mainnet/story",
+    "api": "",
+    "rpc": "https://rpc.cosmos.mainnet.story.despreadlabs.io",
+    "evm": "https://rpc.evm.mainnet.story.despreadlabs.io",
+   "tools_url": {
+      "Grafana Dashboard": "https://grafana.com/grafana/dashboards/22081-story-validator-dashboard-by-despread/",
+      "Node Auto Installer": "https://vp.despreadlabs.io/explorer/mainnet/story"
+    }
 },
  {
     "name": "Cumulo",
