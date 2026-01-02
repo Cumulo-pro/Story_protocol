@@ -469,6 +469,27 @@
         "STORYINFRA — Story Network & IP Intelligence Platform": "https://storyinfra.tech/"
     }
   },
+    {
+    "name": "StakeUp",
+    "webservices": "https://stakeup.tech/services/mainnet/story",
+    "x": "stakeup_tech",
+    "validatorlogo": "stakeup.jpg",
+    "explorer": "",
+    "snapshot": "https://stakeup.tech/services/mainnet/story",
+    "seeds": "6b0ffcce9b59b91ceb8eea5d4599e27707e3604a@seeds.stakeup.tech:10221",
+    "bridge_snap": "",
+    "peers": "",
+    "api": "https://api.story.stakeup.tech",
+    "rpc": "https://rpc.story.stakeup.tech",
+    "evm": "https://json-rpc.story.stakeup.tech",
+    "content": {
+        "Node installation": "https://storyinfra.tech/"
+    },
+    "tools_url": {
+        "Statesync": "https://stakeup.tech/services/mainnet/story",
+        "RPC Scanner": "https://stakeup.tech/services/mainnet/story"
+    }
+  },
  {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/services/story/",
