@@ -490,6 +490,26 @@
         "RPC Scanner": "https://stakeup.tech/services/mainnet/story"
     }
   },
+      {
+    "name": "CoinHunters",
+    "webservices": "https://service.coinhunterstr.com/mainnet/story-protocol/story-mainnet",
+    "x": "CoinHuntersTR",
+    "validatorlogo": "coinhunters.jpg",
+    "explorer": "",
+    "snapshot": "https://service.coinhunterstr.com/mainnet/story-protocol/story-mainnet/snapshots",
+    "seeds": "",
+    "bridge_snap": "",
+    "peers": "",
+    "api": "",
+    "rpc": "",
+    "evm": "",
+    "content": {
+        "Node installation": "https://service.coinhunterstr.com/mainnet/story-protocol/story-mainnet/installation"
+    },
+    "tools_url": {
+        "Statesync": ""
+    }
+  },
  {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/services/story/",
