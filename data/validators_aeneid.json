@@ -473,6 +473,31 @@
       "Decentralized Peer Monitor": "https://cumulo.pro/services/story-aeneid/peerscan"
     }
   },
+   {
+    "name": "Validexis",
+    "webservices": "https://services.validexis.com/testnets/story",
+    "x": "validexis",
+    "validatorlogo": "validexis.jpg",
+    "explorer": "",
+    "snapshot": "https://services.validexis.com/testnets/story/snapshot",
+    "archive_snapshot": "",
+    "bridge_snap": "https://services.validexis.com/mainnets/celestia/snapshot",
+    "evm": "https://evm-story-testnet.validexis.com",
+    "api": "m",
+    "peers": "5713c7da1e80c938643ea4aa99957bb0aadde9c1@story-testnet-peer.validexis.com:36656",
+    "rpc": "https://services.validexis.com/testnets/story",
+    "grpc": "",
+    "seeds": "dfb96be7e47cd76762c1dd45a5f76e536be47faa@story-testnet-seed.validexis.com:36656",
+    "wss_cosmos": "wss://rpc-story-testnet.validexis.com/websocket",
+    "wss_evm": "https://evm-story-testnet.validexis.com/",
+    "tools_url": {
+        "": ""
+    },
+    "content_url": {
+        "Node Installation": "https://services.validexis.com/testnets/story/installation",
+        "Useful Commands": "https://services.validexis.com/testnets/story/useful-commands"
+    }
+  },
   {
     "name": "BlockNth",
     "webservices": "https://docs.blocknth.com/docs/category/story-protocol-testnet",
