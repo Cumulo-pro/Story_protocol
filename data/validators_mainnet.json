@@ -446,6 +446,23 @@
       "Node Auto Installer": "https://vp.despreadlabs.io/explorer/mainnet/story"
     }
 },
+   {
+    "name": "Validexis",
+    "webservices": "",
+    "x": "validexis",
+    "validatorlogo": "validexis.jpg",
+    "explorer": "",
+    "snapshot": "",
+    "archive_snapshot": "",
+    "bridge_snap": "",
+    "peers": "",
+    "api": "",
+    "rpc": "",
+    "grpc": "",
+    "tools_url": {
+        "STORYINFRA — Story Network & IP Intelligence Platform": "https://storyinfra.tech/"
+    }
+  },
  {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/services/story/",
