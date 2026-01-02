@@ -292,14 +292,20 @@
   },
     {
     "name": "Endorphine Stake",
-    "webservices": "",
+    "webservices": "https://services.endorphinestake.com/mainnets/Story",
     "x": "endorphinestake",
+    "snapshot": "https://services.endorphinestake.com/mainnets/Story",
     "validatorlogo": "endorphinestake.jpg",
-    "evm": "",
-    "api": "",
-    "rpc": "",
+    "evm": "https://story-evm.endorphinestake.com:8945",
+    "api": "https://story-api.endorphinestake.com",
+    "wss_cosmos": "wss://story-ws.endorphinestake.com/websocket",
+    "rpc": "https://story-rpc.endorphinestake.com",
+     "wss_evm": "wss://story-evm-ws.endorphinestake.com",
     "tools_url": {
-          "Buzznodes is an innovation among validator monitoring tools": "https://story.buzznodes.com/"
+          "Buzznodes: monitoring stack that uses VoIP channels": "https://story.buzznodes.com/",
+          "License Checker": "https://x.com/endorphinestake/status/1967930807533666389",
+          "EFK Monitoring": "https://github.com/endorphinestake/story-efk",
+          "Footsteps of Story Validators": "https://forum.story.foundation/t/footsteps-of-story-validators"
        }
     },
     {
@@ -313,7 +319,7 @@
     "api": "m",
     "rpc": "",
     "grpc": "",
-     "snapshot": "https://services.tienthuattoan.com/mainnet/story/snapshot",
+    "snapshot": "https://services.tienthuattoan.com/mainnet/story/snapshot",
     "tools_url": {
         "Decentralization Map": "https://services.tienthuattoan.com/mainnet/story/map",
          "State-sync": "https://services.tienthuattoan.com/mainnet/story/state-sync"
