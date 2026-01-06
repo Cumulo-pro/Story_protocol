@@ -13,7 +13,6 @@ This is a **clean, from-scratch** installation flow aligned with our internal gu
 - Start services and follow logs
 - (Optional) Create validator
 
-> ⚠️ If you previously ran Story under a different user/home, remove old config before starting (see **Troubleshooting**).
 
 ---
 
