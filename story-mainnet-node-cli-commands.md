@@ -1,13 +1,5 @@
 # Story Mainnet — Node CLI Command Reference
 
-This document is a **command-line (CLI) reference** for operating a Story Mainnet node.
-It complements the installation guide and focuses on **operations, monitoring, staking, and troubleshooting**.
-
-**Chain ID:** `story-1`  
-**Consensus client:** `story`  
-**Execution client:** `story-geth`
-
----
 
 ## ⚙️ systemd — Service Operations
 
