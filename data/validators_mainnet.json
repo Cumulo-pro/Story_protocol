@@ -510,6 +510,30 @@
         "Statesync": ""
     }
   },
+   {
+    "name": "DTEAM",
+    "webservices": "https://dteam.tech/services/overview/story/mainnet",
+    "x": "dteamtech",
+    "validatorlogo": "dteamtech.png",
+    "explorer": "",
+    "snapshot": "https://dteam.tech/services/snapshot/story/mainnet",
+    "peers": "https://dteam.tech/services/peers/story/mainnet",
+    "websocket": "",
+    "seeds": "https://dteam.tech/services/seeds/story/mainnet",
+    "api": "https://api.story.mainnet.dteam.tech:443",
+    "rpc": "https://rpc.story.mainnet.dteam.tech:443",
+    "evm": "https://evm-rpc.story.mainnet.dteam.tech:443",
+    "addrbook": "https://dteam.tech/services/addrbook/story/mainnet",
+    "tools_url": {
+      "state-sync": "https://dteam.tech/services/state-sync/story/mainnet",
+      "Story IP Graph Visualization": "https://graph-story.app/",
+      "Story Installer": "https://github.com/DTEAMTECH/story-installer",
+      "Chat GPT assistant for Story Protocol": "https://chatgpt.com/g/g-673b6f19371481919fe8b41d62d0d83d-story-protocol-assistant-by-dteam"
+    },
+    "content": {
+      "Installation Guide": "https://dteam.tech/services/installation-guide/story/mainnet"
+    }
+},
  {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/services/story/",
