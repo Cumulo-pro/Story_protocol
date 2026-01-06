@@ -63,14 +63,12 @@ sudo journalctl -u story-geth -f -o cat
 
 ### Latest block height
 ```bash
-curl -s localhost:26647/status | jq .result.sync_info.latest_block_height
-curl -s localhost:26637/status | jq .result.sync_info.latest_block_height
+curl -s localhost:26657/status | jq .result.sync_info.latest_block_height
 ```
 
 ### Syncing status
 ```bash
-curl -s localhost:26637/status | jq .result.sync_info.catching_up
-curl -s localhost:26647/status | jq .result.sync_info.catching_up
+curl -s localhost:26657/status | jq .result.sync_info.catching_up
 ```
 
 ### Generic node info (auto-detect RPC port)
@@ -84,17 +82,17 @@ curl localhost:$(sed -n '/\[rpc\]/,/laddr/ { /laddr/ {s/.*://; s/".*//; p} }' $H
 
 ### Number of peers
 ```bash
-curl -s http://localhost:26637/net_info | jq '.result.n_peers'
+curl -s http://localhost:26657/net_info | jq '.result.n_peers'
 ```
 
 ### List connected peers
 ```bash
-curl -s http://localhost:26637/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):26636"'
+curl -s http://localhost:26657/net_info | jq -r '.result.peers[] | "\(.node_info.id)@\(.remote_ip):26656"'
 ```
 
 ### Your node peer string
 ```bash
-node_id=$(curl -s http://localhost:26647/status | jq -r '.result.node_info.id')
+node_id=$(curl -s http://localhost:26657/status | jq -r '.result.node_info.id')
 public_ip=$(curl -s ifconfig.me)
 echo "${node_id}@${public_ip}:26646"
 ```
@@ -125,17 +123,8 @@ story validator export | grep "EVM Public Key:" | awk '{print $NF}'
 ### Create validator
 ```bash
 story validator create \
-  --stake 1024000000000000000000 \
-  --moniker "Cumulo" \
-  --chain-id 1514 \
-  --unlocked=true
-```
-
-### Create validator with commission
-```bash
-story validator create \
   --stake 1035000000000000000000 \
-  --moniker "Cumulo" \
+  --moniker (moniker) \
   --chain-id 1514 \
   --unlocked=true \
   --commission-rate 500 \
@@ -267,13 +256,6 @@ story-geth --exec "eth.gasPrice" attach ~/.story/geth/story/geth.ipc
 ```bash
 story-geth --exec "eth.getBalance('<YOUR_EVM_ADDRESS>')" attach ~/.story/geth/story/geth.ipc
 ```
-
----
-
-## 🚰 Faucet
-
-Testnet / funding resources:
-- https://faucet.story.foundation/
 
 ---
 
