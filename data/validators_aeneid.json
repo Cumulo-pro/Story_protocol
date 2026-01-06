@@ -543,6 +543,17 @@
       "Installation Guide": "https://dteam.tech/services/installation-guide/story/testnet"
     }
 },
+     {
+    "name": "Polkachu",
+    "webservices": "https://www.polkachu.com/testnets/story",
+    "x": "polka_chu",
+    "validatorlogo": "polkachu.jpg",
+    "api": "",
+    "rpc": "https://story-testnet-rpc.polkachu.com/",
+    "evm": "https://storyevm-testnet-rpc.polkachu.com/",
+    "snapshot": "https://www.polkachu.com/testnets/story/snapshots",
+    "addrbook": "https://www.polkachu.com/testnets/story/addrbooks"
+},
     {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/story-aeneid/",
