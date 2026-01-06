@@ -1,4 +1,4 @@
-# Story Mainnet (story-1) — Full Node Installation Guide (Story + Story-Geth)
+# Story Node Installation Guide
 
 **Chain ID:** `story-1`  
 **Story (consensus client):** `v1.4.2-stable`  
