@@ -106,7 +106,7 @@ story version
 ## 5) Initialize Node
 
 ```bash
-story init --network story --moniker CumuloRPC
+story init --network story --moniker (moniker)
 ```
 
 ---
