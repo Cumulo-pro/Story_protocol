@@ -519,6 +519,30 @@
       "Story Node Monitor": "https://docs.blocknth.com/docs/tools/chainmonidtor"
     }
    },
+   {
+    "name": "DTEAM",
+    "webservices": "https://dteam.tech/services/overview/story/testnet",
+    "x": "dteamtech",
+    "validatorlogo": "dteamtech.png",
+    "explorer": "",
+    "snapshot": "https://dteam.tech/services/snapshot/story/testnet",
+    "peers": "https://dteam.tech/services/peers/story/testnet",
+    "websocket": "",
+    "seeds": "https://dteam.tech/services/seeds/story/testnet",
+    "api": "https://api.story.testnet.dteam.tech:443",
+    "rpc": "https://rpc.story.testnet.dteam.tech:443",
+    "evm": "https://evm-rpc.story.testnet.dteam.tech:443",
+    "addrbook": "https://dteam.tech/services/addrbook/story/testnet",
+    "tools_url": {
+      "state-sync": "https://dteam.tech/services/state-sync/story/testnet",
+      "Story IP Graph Visualization": "https://graph-story.app/",
+      "Story Installer": "https://github.com/DTEAMTECH/story-installer",
+      "Chat GPT assistant for Story Protocol": "https://chatgpt.com/g/g-673b6f19371481919fe8b41d62d0d83d-story-protocol-assistant-by-dteam"
+    },
+    "content": {
+      "Installation Guide": "https://dteam.tech/services/installation-guide/story/testnet"
+    }
+},
     {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/story-aeneid/",
