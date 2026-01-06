@@ -534,6 +534,17 @@
       "Installation Guide": "https://dteam.tech/services/installation-guide/story/mainnet"
     }
 },
+    {
+    "name": "Polkachu",
+    "webservices": "https://polkachu.com/networks/celestia",
+    "x": "polka_chu",
+    "validatorlogo": "polkachu.jpg",
+    "api": "",
+    "rpc": "https://story-rpc.polkachu.com/",
+    "evm": "https://storyevm-rpc.polkachu.com/",
+    "snapshot": "https://www.polkachu.com/tendermint_snapshots/story",
+    "addrbook": "https://www.polkachu.com/addrbooks/story"
+},
  {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/services/story/",
