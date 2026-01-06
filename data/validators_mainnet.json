@@ -536,7 +536,7 @@
 },
     {
     "name": "Polkachu",
-    "webservices": "https://polkachu.com/networks/celestia",
+    "webservices": "https://polkachu.com/networks/story",
     "x": "polka_chu",
     "validatorlogo": "polkachu.jpg",
     "api": "",
