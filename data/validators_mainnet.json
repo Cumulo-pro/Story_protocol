@@ -514,7 +514,7 @@
     "name": "DTEAM",
     "webservices": "https://dteam.tech/services/overview/story/mainnet",
     "x": "dteamtech",
-    "validatorlogo": "dteamtech.png",
+    "validatorlogo": "dteam.png",
     "explorer": "",
     "snapshot": "https://dteam.tech/services/snapshot/story/mainnet",
     "peers": "https://dteam.tech/services/peers/story/mainnet",
