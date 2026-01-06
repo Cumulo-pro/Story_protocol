@@ -1,4 +1,4 @@
-# Story Mainnet — Node CLI Command Reference
+# Story Node CLI Command Reference
 
 
 ## ⚙️ systemd — Service Operations
