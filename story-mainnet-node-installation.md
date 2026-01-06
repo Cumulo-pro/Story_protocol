@@ -116,14 +116,7 @@ story init --network story --moniker CumuloRPC
 Primary:
 
 ```bash
-curl -Ls https://ss.story.nodestake.org/genesis.json > $HOME/.story/story/config/genesis.json
-```
-
-Alternative:
-
-```bash
-wget -O genesis.json https://snapshots.polkachu.com/genesis/story/genesis.json --inet4-only
-mv genesis.json $HOME/.story/story/config/
+curl -Ls https://snap.story.cumulo.com.es/story-snapshots/genesis.json > $HOME/.story/story/config/genesis.json
 ```
 
 ---
@@ -133,14 +126,7 @@ mv genesis.json $HOME/.story/story/config/
 Primary:
 
 ```bash
-curl -Ls https://ss.story.nodestake.org/addrbook.json > $HOME/.story/story/config/addrbook.json
-```
-
-Alternative:
-
-```bash
-wget -O addrbook.json https://snapshots.polkachu.com/addrbook/story/addrbook.json --inet4-only
-mv addrbook.json $HOME/.story/story/config/
+curl -Ls https://snap.story.cumulo.com.es/story-snapshots/addrbook.json > $HOME/.story/story/config/addrbook.json
 ```
 
 ---
