@@ -1,15 +1,19 @@
-# Story Node Installation Guide
+# Story Mainnet (story-1) — Node Installation Guide (Clean Install)
 
 **Chain ID:** `story-1`  
 **Story (consensus client):** `v1.4.2-stable`  
 **Story-Geth (execution client):** `v1.2.0-stable`  
-**Audience:** Operators running a **full node / RPC / validator** on Story Mainnet.
 
-> This guide installs **two services**:
-> - `story-geth` → Execution client (EVM)
-> - `story` → Consensus + ABCI app
->
-> They communicate via **Engine API** on `127.0.0.1:8551` and must share the same **JWT secret**.
+This is a **clean, from-scratch** installation flow aligned with our internal guide:
+- Install `story-geth` (execution)
+- Build and install `story` (consensus)
+- Init node
+- Download `genesis.json` + `addrbook.json`
+- Create `systemd` services
+- Start services and follow logs
+- (Optional) Create validator
+
+> ⚠️ If you previously ran Story under a different user/home, remove old config before starting (see **Troubleshooting**).
 
 ---
 
@@ -17,25 +21,18 @@
 
 - **CPU:** 8 cores+
 - **RAM:** 32 GB+
-- **Disk:** 400 GB+ **NVMe**
+- **Disk:** 400 GB+ NVMe
 - **Network:** 100 Mbps+
 
 ---
 
-## 🔌 Ports Reference
+## 🔌 Ports
 
-### Local / Internal (recommended)
-| Service | Purpose | Bind | Port |
+| Component | Purpose | Bind | Port |
 |---|---|---:|---:|
-| story-geth | Engine API (AuthRPC) | 127.0.0.1 | 8551 |
-
-### Public (only if you intentionally expose them)
-| Service | Purpose | Bind | Port |
-|---|---|---:|---:|
-| story | Story REST API | 0.0.0.0 | 1307 |
-| story-geth | EVM JSON-RPC HTTP | 0.0.0.0 | 8547 |
-
-> **Security note:** If you expose `1307` or `8547` publicly, protect them with firewall and/or reverse proxy (Nginx), rate limits, and allowlists.
+| story | REST API | 0.0.0.0 | 1307 |
+| story-geth | EVM JSON-RPC (HTTP) | 0.0.0.0 | 8547 |
+| story-geth | Engine API (AuthRPC, internal) | 127.0.0.1 | 8551 |
 
 ---
 
@@ -43,7 +40,7 @@
 
 ```bash
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y curl git wget htop tmux build-essential jq make lz4 gcc unzip openssl
+sudo apt install -y curl git wget htop tmux build-essential jq make lz4 gcc unzip
 ```
 
 ---
@@ -53,22 +50,16 @@ sudo apt install -y curl git wget htop tmux build-essential jq make lz4 gcc unzi
 ```bash
 cd $HOME
 VER="1.22.5"
-wget "https://golang.org/dl/go${VER}.linux-amd64.tar.gz"
+wget "https://golang.org/dl/go$VER.linux-amd64.tar.gz"
 sudo rm -rf /usr/local/go
-sudo tar -C /usr/local -xzf "go${VER}.linux-amd64.tar.gz"
-rm "go${VER}.linux-amd64.tar.gz"
+sudo tar -C /usr/local -xzf "go$VER.linux-amd64.tar.gz"
+rm "go$VER.linux-amd64.tar.gz"
 
-[ ! -f "$HOME/.bash_profile" ] && touch "$HOME/.bash_profile"
-echo "export PATH=\$PATH:/usr/local/go/bin:\$HOME/go/bin" >> "$HOME/.bash_profile"
-source "$HOME/.bash_profile"
+[ ! -f ~/.bash_profile ] && touch ~/.bash_profile
+echo "export PATH=\$PATH:/usr/local/go/bin:\$HOME/go/bin" >> ~/.bash_profile
+source ~/.bash_profile
 
-mkdir -p "$HOME/go/bin"
-```
-
-Check:
-
-```bash
-go version
+mkdir -p ~/go/bin
 ```
 
 ---
@@ -77,9 +68,10 @@ go version
 
 ```bash
 cd $HOME
+rm -rf story-geth
 wget -O story-geth https://github.com/piplabs/story-geth/releases/download/v1.2.0/geth-linux-amd64
-chmod +x story-geth
-mv story-geth "$HOME/go/bin/"
+chmod +x $HOME/story-geth
+mv $HOME/story-geth $HOME/go/bin/
 ```
 
 Verify:
@@ -100,7 +92,7 @@ git clone https://github.com/piplabs/story
 cd story
 git checkout v1.4.2
 go build -o story ./client
-mv story "$HOME/go/bin/"
+mv $HOME/story/story $HOME/go/bin/
 ```
 
 Verify:
@@ -112,125 +104,83 @@ story version
 
 ---
 
-## 5) Initialize the Node
-
-Choose a moniker:
+## 5) Initialize Node
 
 ```bash
-export MONIKER="CumuloRPC"
+story init --network story --moniker CumuloRPC
 ```
-
-Initialize:
-
-```bash
-story init --network story --moniker "$MONIKER"
-```
-
-This creates the directory layout:
-
-- `~/.story/story` (consensus/app)
-- `~/.story/geth` (execution client data)
 
 ---
 
 ## 6) Download Genesis
 
-Primary source (NodeStake):
+Primary:
 
 ```bash
-curl -Ls https://ss.story.nodestake.org/genesis.json > "$HOME/.story/story/config/genesis.json"
+curl -Ls https://ss.story.nodestake.org/genesis.json > $HOME/.story/story/config/genesis.json
 ```
 
-Alternative source (Polkachu):
+Alternative:
 
 ```bash
 wget -O genesis.json https://snapshots.polkachu.com/genesis/story/genesis.json --inet4-only
-mv genesis.json "$HOME/.story/story/config/genesis.json"
-```
-
-Quick sanity check (chain id):
-
-```bash
-jq -r '.chain_id' "$HOME/.story/story/config/genesis.json"
-# expected: story-1
+mv genesis.json $HOME/.story/story/config/
 ```
 
 ---
 
 ## 7) Download Addrbook
 
-Primary source (NodeStake):
+Primary:
 
 ```bash
-curl -Ls https://ss.story.nodestake.org/addrbook.json > "$HOME/.story/story/config/addrbook.json"
+curl -Ls https://ss.story.nodestake.org/addrbook.json > $HOME/.story/story/config/addrbook.json
 ```
 
-Alternative source (Polkachu):
+Alternative:
 
 ```bash
 wget -O addrbook.json https://snapshots.polkachu.com/addrbook/story/addrbook.json --inet4-only
-mv addrbook.json "$HOME/.story/story/config/addrbook.json"
+mv addrbook.json $HOME/.story/story/config/
 ```
 
 ---
 
-## 8) Create Engine API JWT (Required)
+## 8) Create `story.service` (Consensus)
 
-This is the most common setup pitfall.
-
-Story (consensus) connects to story-geth (execution) via **Engine API**.  
-They must share a JWT file (32 bytes hex / 64 chars).
+File: `/etc/systemd/system/story.service`
 
 ```bash
-mkdir -p "$HOME/.story/geth/story/geth"
-openssl rand -hex 32 > "$HOME/.story/geth/story/geth/jwtsecret"
-chmod 600 "$HOME/.story/geth/story/geth/jwtsecret"
-```
+sudo tee /etc/systemd/system/story.service > /dev/null <<EOF
+[Unit]
+Description=Story Node
+After=network.target
 
-Confirm it exists:
+[Service]
+Type=simple
+User=$USER
+WorkingDirectory=$HOME/.story/story
 
-```bash
-ls -lah "$HOME/.story/geth/story/geth/jwtsecret"
+ExecStart=$(which story) run \
+  --network story \
+  --api-enable \
+  --api-address=0.0.0.0:1307 \
+  --engine-endpoint=http://127.0.0.1:8551
+
+Restart=on-failure
+RestartSec=5s
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
 ```
 
 ---
 
-## 9) (Important) Fix `story.toml` Engine Settings
+## 9) Create `story-geth.service` (Execution)
 
-If your node was initialized under a different user previously, your `story.toml` may contain a **wrong absolute path** for `engine-jwt-file` or the wrong port for `engine-endpoint`.
-
-Open:
-
-```bash
-nano "$HOME/.story/story/config/story.toml"
-```
-
-Make sure these lines exist and match:
-
-```toml
-engine-endpoint = "http://127.0.0.1:8551"
-engine-jwt-file = "$HOME/.story/geth/story/geth/jwtsecret"
-```
-
-If you prefer editing via CLI (no nano), replace values like this:
-
-```bash
-sed -i.bak   -e 's|^engine-endpoint *=.*|engine-endpoint = "http://127.0.0.1:8551"|'   -e "s|^engine-jwt-file *=.*|engine-jwt-file = \"$HOME/.story/geth/story/geth/jwtsecret\"|"   "$HOME/.story/story/config/story.toml"
-```
-
-Verify:
-
-```bash
-grep -nE 'engine-endpoint|engine-jwt-file' "$HOME/.story/story/config/story.toml"
-```
-
-> Note: `story` can also receive these via flags. This guide sets them in the service, but keeping `story.toml` correct avoids surprises.
-
----
-
-## 10) Create systemd service: `story-geth.service`
-
-> Start **execution** first.
+File: `/etc/systemd/system/story-geth.service`
 
 ```bash
 sudo tee /etc/systemd/system/story-geth.service > /dev/null <<EOF
@@ -249,7 +199,6 @@ ExecStart=$(which story-geth) \
   --authrpc.addr 127.0.0.1 \
   --authrpc.port 8551 \
   --authrpc.vhosts="*" \
-  --authrpc.jwtsecret $HOME/.story/geth/story/geth/jwtsecret \
   --http \
   --http.addr 0.0.0.0 \
   --http.port 8547 \
@@ -259,7 +208,7 @@ ExecStart=$(which story-geth) \
 
 Restart=on-failure
 RestartSec=3
-LimitNOFILE=65535
+LimitNOFILE=4096
 
 [Install]
 WantedBy=multi-user.target
@@ -268,111 +217,32 @@ EOF
 
 ---
 
-## 11) Create systemd service: `story.service`
-
-> Then start **consensus/app**.
-
-```bash
-sudo tee /etc/systemd/system/story.service > /dev/null <<EOF
-[Unit]
-Description=Story Node
-After=network.target
-
-[Service]
-Type=simple
-User=$USER
-WorkingDirectory=$HOME/.story/story
-
-ExecStart=$(which story) run \
-  --network story \
-  --api-enable \
-  --api-address=0.0.0.0:1307 \
-  --engine-endpoint=http://127.0.0.1:8551 \
-  --engine-jwt-file=$HOME/.story/geth/story/geth/jwtsecret
-
-Restart=on-failure
-RestartSec=5s
-LimitNOFILE=65535
-
-[Install]
-WantedBy=multi-user.target
-EOF
-```
-
----
-
-## 12) Enable & Start Services (correct order)
+## 10) Enable & Start Services
 
 ```bash
 sudo systemctl daemon-reload
-sudo systemctl enable story-geth story
+sudo systemctl enable story story-geth
 
 sudo systemctl start story-geth
-sleep 5
 sudo systemctl start story
+
+journalctl -u story -u story-geth -f
 ```
 
 ---
 
-## 13) Logs & Common “First Start” Messages
-
-Follow both logs:
+## 11) Check Logs
 
 ```bash
-journalctl -u story-geth -f
-```
-
-```bash
-journalctl -u story -f
-```
-
-You may see:
-
-- `Upgrading IAVL storage...`  
-  This is normal on first start and can take time depending on disk speed.
-
-If you see:
-
-- `load engine JWT file ... no such file or directory`  
-  Then your `engine-jwt-file` path is wrong or permissions are incorrect.
-
----
-
-## 14) Quick Health Checks
-
-### Check Engine API port is listening
-```bash
-sudo ss -lntp | grep 8551
-```
-
-### Check EVM chainId (via JSON-RPC)
-```bash
-curl -s http://127.0.0.1:8547 \
-  -H "Content-Type: application/json" \
-  --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":1}' | jq
-```
-
-### Check syncing status
-```bash
-curl -s http://127.0.0.1:8547 \
-  -H "Content-Type: application/json" \
-  --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}' | jq
+journalctl -u story -u story-geth -f
 ```
 
 ---
 
-## 15) Validator Creation (Optional)
-
-> Only run this if you are setting up a validator and have prepared keys and funding.
-
-Basic example:
+## 12) Create Validator (Optional)
 
 ```bash
-story validator create \
-  --stake 1024000000000000000000 \
-  --moniker "Cumulo" \
-  --chain-id 1514 \
-  --unlocked=true
+story validator create --stake 1024000000000000000000 --moniker "Cumulo" --chain-id 1514 --unlocked=true
 ```
 
 With commission parameters:
@@ -390,24 +260,32 @@ story validator create \
 
 ---
 
-## ✅ Notes & Best Practices
+## Troubleshooting (only if you used old configs)
 
-- Always run **both services under the same user** to avoid path/JWT mismatches.
-- Keep `--authrpc.addr 127.0.0.1` (local only) for security.
-- If you expose `8547` publicly, consider:
-  - Firewall allowlists
-  - Nginx reverse proxy
-  - Rate limiting and CORS tightening
-- If you ever see the JWT path referencing another home (e.g. `/home/otheruser/...`), fix:
-  - `~/.story/story/config/story.toml`
-  - and/or the systemd unit flags
+### A) JWT / engine errors after reusing a previous setup
+If you see errors like:
+- `engine-jwt-file = "/home/otheruser/.../jwtsecret"` or
+- `open ... jwtsecret: no such file or directory`
 
----
+It means your `story.toml` (or old home directory) contains a stale absolute path.
 
-## Appendix: Clean restart
+Fix by checking:
 
 ```bash
-sudo systemctl restart story-geth
-sleep 3
-sudo systemctl restart story
+grep -nE "engine|jwt" $HOME/.story/story/config/story.toml
 ```
+
+If it points to another user, either:
+- reinstall clean (remove old config), or
+- update `engine-jwt-file` path to your current `$HOME`.
+
+### B) Clean reset of local state (destructive)
+```bash
+sudo systemctl stop story story-geth
+rm -rf $HOME/.story/story/data
+rm -rf $HOME/.story/geth/story/geth/chaindata
+```
+
+Then start services again.
+
+---
