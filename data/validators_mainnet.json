@@ -550,7 +550,7 @@
     "x": "Cumulo_pro",
     "validatorlogo": "cumulo.jpg",
     "peers": "a6d49faf6e1200cade89cb6260c878c38b153c9a@109.228.57.155:26646",
-    "seeds": "",
+    "snaphot": "https://cumulo.pro/services/story/snapshot",
     "api": "https://api.story.cumulo.me",
     "rpc": "https://rpc.story.cumulo.me",
     "grpc": "grpc.story.cumulo.me",
