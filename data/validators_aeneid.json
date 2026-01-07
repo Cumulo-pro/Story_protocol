@@ -560,7 +560,7 @@
     "x": "Cumulo_pro",
     "validatorlogo": "cumulo.jpg",
     "rpc": "https://rpc.story-aeneid.cumulo.me",
-    "grpc": "",
+    "snapshot": "https://cumulo.pro/services/story-aeneid/snapshot",
     "evm": "https://json-rpc.story-aeneid.cumulo.me",
     "wss_cosmos": "wss://rpc.story-aeneid.cumulo.me/websocket",
     "wss_evm": "ws-evm.story-aeneid.cumulo.me",
