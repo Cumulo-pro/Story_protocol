@@ -124,7 +124,6 @@
     "wss_cosmos": "",
     "wss_evm": "",
     "snapshot": "https://j-node.net/mainnet/story/snapshot",
-    "addrbook": "",
     "content": {
       "guide": "https://j-node.net/mainnet/story/installation/"
     }
@@ -204,7 +203,7 @@
   },
     {
     "name": "Cosmic Validator",
-    "webservices": "",
+    "webservices": "https://github.com/CosmicValidator/Story-Aeneid/blob/main/README.md",
     "x": "CosmicValidator",
     "validatorlogo": "cosmivalidator.jpg",
     "evm": "https://story-evm.cosmicvalidator.com",
