@@ -4,7 +4,7 @@
 
 This repository documents the technical contributions provided by **Cumulo** to the Story ecosystem, focused on infrastructure, observability, connectivity, transparency, and technical education.
 
-![LINEA](https://github.com/user-attachments/assets/6cbf6840-7d91-482b-9f97-bdbaf8187e9f)
+---
 
 ## Index
 
@@ -20,7 +20,8 @@ This repository documents the technical contributions provided by **Cumulo** to 
 - [Story External Watcher Bot](#story-external-watcher-bot)
 - [Technical Content & Education (Medium)](#technical-content--education-medium)
 
----
+
+![LINEA](https://github.com/user-attachments/assets/6cbf6840-7d91-482b-9f97-bdbaf8187e9f)
 
 ## Endpoint Scan (RPC Monitoring)
 
