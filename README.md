@@ -23,7 +23,7 @@ This repository documents the technical contributions provided by **Cumulo** to 
 
 ![LINEA](https://github.com/user-attachments/assets/6cbf6840-7d91-482b-9f97-bdbaf8187e9f)
 
-## Endpoint Scan (RPC Monitoring)
+## 🔍 Endpoint Scan (RPC Monitoring)
 
 **Resource:** check_d — Decentralized Endpoint Monitoring Tool  
 **Live dashboards:**  
