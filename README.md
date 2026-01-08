@@ -41,7 +41,7 @@ Improves transparency and reliability of public RPC infrastructure, helps detect
 
 ---
 
-## Decentralized Peer Monitor (PeerScan)
+## 🌐 Decentralized Peer Monitor (PeerScan)
 
 **Live dashboards:**  
 - Mainnet: https://cumulo.pro/services/story/peerscan  
@@ -58,7 +58,7 @@ Improves peer selection and network stability by helping validators and operator
 
 ---
 
-## Validator Resources Directory
+## 🧭 Validator Resources Directory
 
 **Resources:**  
 - Mainnet: https://cumulo.pro/services/story/resources  
@@ -78,7 +78,7 @@ Key Features:
 
 ---
 
-## Story Snapshots
+## 📦 Story Snapshots
 
 **Resources:**  
 - Mainnet: https://cumulo.pro/services/story/snapshot
@@ -99,7 +99,7 @@ Key Features:
 
 ---
 
-## Validator Documentation (Guides)
+## 📘 Validator Documentation (Guides)
 
 **Resources:**  
 - Story Node Installation Guide: https://cumulo.pro/services/story/install  
@@ -110,7 +110,7 @@ Concise technical documentation for Story validators covering node installation 
 
 ---
 
-## Story Grafana Metrics & Monitoring (v3)
+## 📊 Story Grafana Metrics & Monitoring (v3)
 
 **Resource:**  
 - https://cumulo.pro/services/story/monitoring
@@ -126,7 +126,7 @@ Improves operational visibility, helps validators detect consensus or performanc
 
 ---
 
-## Story Activity Tracker
+## 🧾 Story Activity Tracker
 
 **Resource:**  
 - https://cumulo.pro/services/story/activity?chain=Story
@@ -139,7 +139,7 @@ Improves transparency and accountability for delegators, teams, and validators b
 
 ---
 
-## Public Endpoints
+## 🔌 Public Endpoints
 
 **Resources:**  
 - Mainnet: https://cumulo.pro/services/story/conect.php#public-endpoints  
@@ -150,7 +150,7 @@ Publicly available RPC, API, gRPC, JSON-RPC and WebSocket endpoints operated and
 
 ---
 
-## Validator Alerts Bot
+## 🚨 Validator Alerts Bot
 
 **Resource:**  
 - https://cumulo.pro/services/story/monitoring#bot
@@ -166,7 +166,7 @@ Enables faster incident detection and response, reducing downtime and improving 
 
 ---
 
-## Story External Watcher Bot
+## 🛰️ Story External Watcher Bot
 
 **Resource:**  
 - https://github.com/Cumulo-pro/Story_protocol/blob/main/monitoring_bot/story-external-watcher.py
@@ -182,7 +182,7 @@ Adds an additional monitoring layer from an external perspective, improving earl
 
 ---
 
-## Technical Content & Education (Medium)
+## ✍️ Technical Content & Education (Medium)
 
 **Resources:**  
 - English: https://cumulo.pro/story/content  
