@@ -303,9 +303,11 @@
     "tools_url": {
           "Buzznodes: monitoring stack that uses VoIP channels": "https://story.buzznodes.com/",
           "License Checker": "https://x.com/endorphinestake/status/1967930807533666389",
-          "EFK Monitoring": "https://github.com/endorphinestake/story-efk",
-          "Footsteps of Story Validators": "https://drive.google.com/file/d/1vYMvieVCq65JUUy4FvVzoF3CfUAlobYG"
-       }
+          "EFK Monitoring": "https://github.com/endorphinestake/story-efk"
+       },
+    "content": {
+       "Footsteps of Story Validators": "https://drive.google.com/file/d/1vYMvieVCq65JUUy4FvVzoF3CfUAlobYG"
+      }  
     },
     {
     "name": "TTT VN",
