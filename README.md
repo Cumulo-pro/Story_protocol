@@ -1,6 +1,6 @@
 # TECHNICAL CONTRIBUTIONS — Story Networks
 
-**Networks:** Story mainnet & Aeneid testnet
+📌 **Networks:** Story mainnet & Aeneid testnet
 
 This repository documents the technical contributions provided by **Cumulo** to the Story ecosystem, focused on infrastructure, observability, connectivity, transparency, and technical education.
 
