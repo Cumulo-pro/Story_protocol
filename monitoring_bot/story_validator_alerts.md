@@ -4,7 +4,9 @@ Telegram bot for **Story validators** to monitor **missed blocks**, **validator 
 **Bot:** @story_validator_watcher_bot  
 **Name:** Story Validator Alerts
 
-![Story Validator Alerts](assets/story-validator-alerts.png)
+
+<img width="734" height="322" alt="image" src="https://github.com/user-attachments/assets/52a7487f-d18f-4476-8a5f-7795aebc6021" />
+
 
 ---
 
