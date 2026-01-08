@@ -73,6 +73,7 @@ Improves accessibility and usability of RPCs, APIs, explorers, snapshots, tools,
 
 **Resources:**  
 - Mainnet: https://cumulo.pro/services/story/snapshot
+- Testnet: https://cumulo.pro/services/story-aeneid/snapshot
 
 **Description:**  
 High-performance consensus and execution (Geth) snapshots optimized for fast and reliable node recovery using parallel downloads.
