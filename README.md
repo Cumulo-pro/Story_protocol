@@ -34,10 +34,10 @@ This repository documents the technical contributions provided by **Cumulo** to 
 https://github.com/Cumulo-pro/Cumulo-Front-Chain/blob/main/check_End-Points/README.md
 
 **Description:**  
-Decentralized, multi-region monitoring system that evaluates the real performance and availability of public Story RPC endpoints using actual JSON-RPC calls (not ping or TCP checks).
+Decentralized, multi-region monitoring system that evaluates the real performance and availability of public Story RPC endpoints using actual JSON-RPC calls (not ping/TCP checks). Provides objective metrics such as latency, sync status, block height, uptime, and node metadata.  
 
 **Value for Story:**  
-Improves transparency and reliability of public RPC infrastructure and helps identify degraded or unreliable endpoints early.
+Improves transparency and reliability of public RPC infrastructure, helps detect degraded or unreliable endpoints early, and enables developers, indexers, and delegators to identify high-quality access points across regions.  
 
 ---
 
@@ -45,15 +45,16 @@ Improves transparency and reliability of public RPC infrastructure and helps ide
 
 **Live dashboards:**  
 - Mainnet: https://cumulo.pro/services/story/peerscan  
-- Testnet: https://cumulo.pro/services/story-aeneid/peerscan  
+- Testnet: https://cumulo.pro/services/story-aeneid/peerscan
+- 
 **Docs:**  
-- https://github.com/Cumulo-pro/Cumulo-Front-Chain/tree/main/check_peers
+https://github.com/Cumulo-pro/Cumulo-Front-Chain/tree/main/check_peers
 
 **Description:**  
-Distributed monitoring system that analyzes P2P peers, aggregating latency, uptime, geolocation, and historical availability to produce ranked peer views.
+Distributed monitoring system that analyzes P2P peers in the Story Protocol network, aggregating latency, uptime, geolocation, and historical availability to produce ranked peer views.
 
 **Value for Story:**  
-Improves peer selection and network stability by helping operators identify low-latency, high-availability peers across regions.
+Improves peer selection and network stability by helping validators and operators identify low-latency, high-availability peers across regions, strengthening the gossip and connectivity layer.
 
 ---
 
@@ -64,10 +65,16 @@ Improves peer selection and network stability by helping operators identify low-
 - Testnet: https://cumulo.pro/services/story-aeneid/resources
 
 **Description:**  
-Continuously updated directory aggregating validator-provided infrastructure and tooling, indexed and filterable by category.
+Continuously updated directory that aggregates validator-provided infrastructure and tooling for the Story Protocol ecosystem. Resources are indexed and filterable by category to enable fast discovery.
 
 **Value for Story:**  
-Improves accessibility and usability of RPCs, APIs, explorers, snapshots, tools, and technical content for the ecosystem.
+Improves accessibility and usability of the ecosystem by making public RPCs, gRPCs, APIs, EVM RPCs, explorers, snapshots, tools, and technical content easy to locate for developers, validators, delegators, and infrastructure operators.
+
+Key Features:  
+•	Indexed by resource type (RPC, gRPC, API, EVM, Snapshots, Tools, Content, Explorers)  
+•	Covers contributions from multiple Story validators  
+•	Supports both mainnet and testnet environments  
+•	Regularly updated to reflect active infrastructure  
 
 ---
 
