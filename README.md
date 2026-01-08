@@ -85,10 +85,17 @@ Key Features:
 - Testnet: https://cumulo.pro/services/story-aeneid/snapshot
 
 **Description:**  
-High-performance consensus and execution (Geth) snapshots optimized for fast and reliable node recovery using parallel downloads.
+High-performance consensus and execution (Geth) snapshots for Story mainnet, optimized for fast and reliable node recovery using parallel downloads with aria2c.
 
 **Value for Story:**  
-Reduces node sync time and operational overhead, improving network resilience and recovery speed.
+Reduces node sync time and operational overhead for validators and node operators, improves network resilience during restarts or migrations, and enables faster recovery after incidents or maintenance.  
+
+Key Features:  
+•	Separate snapshots for consensus layer and Geth  
+•	Optimized for multi-connection downloads (aria2c)  
+•	Clear, reproducible restore procedure  
+•	Designed to minimize downtime and sync-related issues  
+
 
 ---
 
@@ -99,7 +106,7 @@ Reduces node sync time and operational overhead, improving network resilience an
 - Story Node CLI Command Reference: https://github.com/Cumulo-pro/Story_protocol/blob/main/story-mainnet-node-cli-commands.md
 
 **Description:**  
-Concise technical documentation for validators, publicly maintained and versioned on GitHub.
+Concise technical documentation for Story validators covering node installation and operational CLI commands, publicly maintained and versioned on GitHub.
 
 ---
 
@@ -108,11 +115,14 @@ Concise technical documentation for validators, publicly maintained and versione
 **Resource:**  
 - https://cumulo.pro/services/story/monitoring
 
+**Docs:**  
+https://github.com/Cumulo-pro/Story_protocol/blob/main/monitoring/README.md
+
 **Description:**  
-Production-grade Grafana dashboard providing clear separation between network health and validator performance, with unified documentation.
+Production-grade Grafana monitoring dashboard (v3) for Story validators, providing clear separation between network health and validator performance, with renewed and unified technical documentation.
 
 **Value for Story:**  
-Improves operational visibility and early detection of consensus or performance issues.
+Improves operational visibility, helps validators detect consensus or performance issues early, and raises the overall quality and observability of Story’s validator infrastructure.
 
 ---
 
@@ -122,10 +132,10 @@ Improves operational visibility and early detection of consensus or performance 
 - https://cumulo.pro/services/story/activity?chain=Story
 
 **Description:**  
-Public, timestamped activity and incident log documenting infrastructure events, upgrades, and maintenance actions.
+Public, timestamped activity and incident log documenting all relevant operational events affecting our Story Protocol infrastructure, including incidents, upgrades, configuration changes, and maintenance actions.
 
 **Value for Story:**  
-Improves transparency and accountability for delegators, teams, and validators.
+Improves transparency and accountability for delegators, teams, and validators by providing clear visibility into infrastructure events, how they are handled, and the measures taken to prevent future issues.
 
 ---
 
@@ -136,37 +146,39 @@ Improves transparency and accountability for delegators, teams, and validators.
 - Testnet: https://cumulo.pro/services/story-aeneid/conect.php#public-endpoints
 
 **Description:**  
-Public RPC, API, gRPC, JSON-RPC, and WebSocket endpoints operated and maintained for Story.
+Publicly available RPC, API, gRPC, JSON-RPC and WebSocket endpoints operated and maintained for the Story Protocol network.
 
 ---
 
 ## Validator Alerts Bot
 
 **Resource:**  
-- https://cumulo.pro/services/story/monitoring#bot  
+- https://cumulo.pro/services/story/monitoring#bot
+  
 **Docs:**  
 - https://github.com/Cumulo-pro/Story_protocol/blob/main/monitoring_bot/story_validator_alerts.md
 
 **Description:**  
-Automated alerting system notifying operators of critical events affecting node health and performance.
+Automated alerting system for Story Protocol validators, designed to notify operators of critical events affecting node health and performance.  
 
 **Value for Story:**  
-Enables faster incident detection and response, reducing downtime.
+Enables faster incident detection and response, reducing downtime and improving overall reliability of validator operations across the network.  
 
 ---
 
 ## Story External Watcher Bot
 
 **Resource:**  
-- https://github.com/Cumulo-pro/Story_protocol/blob/main/monitoring_bot/story-external-watcher.py  
+- https://github.com/Cumulo-pro/Story_protocol/blob/main/monitoring_bot/story-external-watcher.py
+  
 **Docs:**  
 - https://github.com/Cumulo-pro/Story_protocol/blob/main/monitoring_bot/README_story_external_watcher.md
 
 **Description:**  
-Internal monitoring bot performing external checks against infrastructure and endpoints with configurable rules.
+Internal monitoring bot that performs external checks against Story Protocol infrastructure and endpoints, with configurable rules and thresholds documented in GitHub.  
 
 **Value for Story:**  
-Adds an additional external monitoring layer, complementing on-node alerting systems.
+Adds an additional monitoring layer from an external perspective, improving early detection of connectivity or availability issues and complementing on-node alerting systems.  
 
 ---
 
@@ -177,7 +189,10 @@ Adds an additional external monitoring layer, complementing on-node alerting sys
 - Spanish: https://cumulo.pro/story/content_es
 
 **Description:**  
-Ongoing publication of technical and educational content covering validator operations, infrastructure, and ecosystem tooling, published in English and Spanish.
+Ongoing publication of technical and educational content about Story Protocol on Medium, covering validator operations, infrastructure, ecosystem tooling, and network updates, published in both English and Spanish.  
+
+**Value for Story:**  
+Expands Story’s technical reach and understanding across a broader audience, including Spanish-speaking operators and builders, and provides long-form, reusable documentation beyond official channels  
 
 **Audience:**  
 - ~3.8K monthly presentations (Dec 2025)  
