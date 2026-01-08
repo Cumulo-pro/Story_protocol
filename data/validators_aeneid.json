@@ -436,7 +436,10 @@
     "rpc": "",
     "tools_url": {
           "Buzznodes is an innovation among validator monitoring tools": "https://story.buzznodes.com/"
-       }
+       },
+     "content": {
+       "Footsteps of Story Validators": "https://drive.google.com/file/d/1vYMvieVCq65JUUy4FvVzoF3CfUAlobYG"
+      }  
     },
      {
     "name": "Lavender.Five Nodes",
