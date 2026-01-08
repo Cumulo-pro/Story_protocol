@@ -546,7 +546,7 @@
       "Installation Guide": "https://dteam.tech/services/installation-guide/story/testnet"
     }
 },
-     {
+ {
     "name": "Polkachu",
     "webservices": "https://www.polkachu.com/testnets/story",
     "x": "polka_chu",
@@ -556,6 +556,18 @@
     "evm": "https://storyevm-testnet-rpc.polkachu.com/",
     "snapshot": "https://www.polkachu.com/testnets/story/snapshots",
     "addrbook": "https://www.polkachu.com/testnets/story/addrbooks"
+},
+    {
+    "name": "Metatarz",
+    "webservices": "",
+    "x": "metatarzxyz",
+    "validatorlogo": "metatarzxyz.jpg",
+    "api": "",
+    "rpc": "",
+    "evm": "",
+     "tools_url": {
+      "Interactive map for Story nodes": "https://metatarz.xyz/maps/devnet-1"
+    }
 },
     {
     "name": "Cumulo",
