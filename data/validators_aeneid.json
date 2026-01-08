@@ -286,7 +286,7 @@
   },
     {
     "name": "OneNov",
-    "webservices": "",
+    "webservices": "https://www.onenov.xyz/validator/Story",
     "x": "Surya021292",
     "validatorlogo": "onenov.jpg",
     "explorer": "https://explorer.onenov.xyz/Story-test",
@@ -295,12 +295,15 @@
      "rpc": "https://rpc-story-aeneid.onenov.xyz",
      "grpc": "grpc-story-aeneid.onenov.xyz",
      "websocket": "",
-     "snapshot": "",
+     "snapshot": "https://www.onenov.xyz/validator/Story",
      "wss_evm":"wss-evm-story-aeneid.onenov.xyz",
       "wss_cosmos": "wss-story-aeneid.onenov.xyz",
      "evm": "https://rpc-evm-story-aeneid.onenov.xyz",
       "tools_url": {
        "Dashboard monitoring": "https://dashboard-story.onenov.xyz"
+      },
+    "content": {
+      "Install guide": "https://www.onenov.xyz/validator/Story"
     }   
   },
     {
