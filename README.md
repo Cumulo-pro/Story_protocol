@@ -30,7 +30,7 @@ This repository documents the technical contributions provided by **Cumulo** to 
 - Mainnet: https://cumulo.pro/services/story/rpcscan  
 - Testnet: https://cumulo.pro/services/story-aeneid/rpcscan  
 **Docs:**  
-- https://github.com/Cumulo-pro/Cumulo-Front-Chain/blob/main/check_End-Points/README.md
+https://github.com/Cumulo-pro/Cumulo-Front-Chain/blob/main/check_End-Points/README.md
 
 **Description:**  
 Decentralized, multi-region monitoring system that evaluates the real performance and availability of public Story RPC endpoints using actual JSON-RPC calls (not ping or TCP checks).
