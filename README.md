@@ -8,24 +8,24 @@ This repository documents the technical contributions provided by **Cumulo** to 
 
 ## Index
 
-- [Endpoint Scan (RPC Monitoring)](#endpoint-scan-rpc-monitoring)
-- [Decentralized Peer Monitor (PeerScan)](#decentralized-peer-monitor-peerscan)
-- [Validator Resources Directory](#validator-resources-directory)
+- [Endpoint Scan (RPC Monitoring)](#endpoint-scan)
+- [Decentralized Peer Monitor (PeerScan)](#peerscan)
+- [Validator Resources Directory](#validator-resources)
 - [Story Snapshots](#story-snapshots)
-- [Validator Documentation (Guides)](#validator-documentation-guides)
-- [Story Grafana Metrics & Monitoring (v3)](#story-grafana-metrics-monitoring-v3)
-- [Story Activity Tracker](#story-activity-tracker)
+- [Validator Documentation (Guides)](#validator-guides)
+- [Story Grafana Metrics & Monitoring (v3)](#grafana-v3)
+- [Story Activity Tracker](#activity-tracker)
 - [Public Endpoints](#public-endpoints)
-- [Validator Alerts Bot](#validator-alerts-bot)
-- [Story External Watcher Bot](#story-external-watcher-bot)
-- [Technical Content & Education (Medium)](#technical-content-education-medium)
-- [Story Validator Uptime Proof](#story-validator-uptime-proof)
+- [Validator Alerts Bot](#alerts-bot)
+- [Story External Watcher Bot](#external-watcher)
+- [Technical Content & Education (Medium)](#medium-content)
+- [Story Validator Uptime Proof](#uptime-proof)
 
 
 
 ![LINEA](https://github.com/user-attachments/assets/6cbf6840-7d91-482b-9f97-bdbaf8187e9f)
 
-## 🔍 Endpoint Scan (RPC Monitoring)
+## 🔍 Endpoint Scan (RPC Monitoring) <a id="endpoint-scan"></a>
 
 **Resource:** check_d — Decentralized Endpoint Monitoring Tool  
 **Live dashboards:**  
@@ -43,7 +43,7 @@ Improves transparency and reliability of public RPC infrastructure, helps detect
 
 ---
 
-## 🌐 Decentralized Peer Monitor (PeerScan)
+## 🌐 Decentralized Peer Monitor (PeerScan) <a id="peerscan"></a>
 
 **Live dashboards:**  
 - Mainnet: https://cumulo.pro/services/story/peerscan  
@@ -60,7 +60,7 @@ Improves peer selection and network stability by helping validators and operator
 
 ---
 
-## 🧭 Validator Resources Directory
+## 🧭 Validator Resources Directory <a id="validator-resources"></a>
 
 **Resources:**  
 - Mainnet: https://cumulo.pro/services/story/resources  
@@ -80,7 +80,7 @@ Key Features:
 
 ---
 
-## 📦 Story Snapshots
+## 📦 Story Snapshots <a id="story-snapshots"></a>
 
 **Resources:**  
 - Mainnet: https://cumulo.pro/services/story/snapshot
@@ -101,7 +101,7 @@ Key Features:
 
 ---
 
-## 📘 Validator Documentation (Guides)
+## 📘 Validator Documentation (Guides) <a id="validator-guides"></a>
 
 **Resources:**  
 - Story Node Installation Guide: https://cumulo.pro/services/story/install  
@@ -112,7 +112,7 @@ Concise technical documentation for Story validators covering node installation 
 
 ---
 
-## 📊 Story Grafana Metrics & Monitoring (v3)
+## 📊 Story Grafana Metrics & Monitoring (v3) <a id="grafana-v3"></a>
 
 **Resource:**  
 - https://cumulo.pro/services/story/monitoring
@@ -128,7 +128,7 @@ Improves operational visibility, helps validators detect consensus or performanc
 
 ---
 
-## 🧾 Story Activity Tracker
+## 🧾 Story Activity Tracker <a id="activity-tracker"></a>
 
 **Resource:**  
 - https://cumulo.pro/services/story/activity?chain=Story
@@ -141,7 +141,7 @@ Improves transparency and accountability for delegators, teams, and validators b
 
 ---
 
-## 🔌 Public Endpoints
+## 🔌 Public Endpoints <a id="public-endpoints"></a>
 
 **Resources:**  
 - Mainnet: https://cumulo.pro/services/story/conect.php#public-endpoints  
@@ -152,7 +152,7 @@ Publicly available RPC, API, gRPC, JSON-RPC and WebSocket endpoints operated and
 
 ---
 
-## 🚨 Validator Alerts Bot
+## 🚨 Validator Alerts Bot <a id="alerts-bot"></a>
 
 **Resource:**  
 - https://cumulo.pro/services/story/monitoring#bot
@@ -168,7 +168,7 @@ Enables faster incident detection and response, reducing downtime and improving 
 
 ---
 
-## 🛰️ Story External Watcher Bot
+## 🛰️ Story External Watcher Bot <a id="external-watcher"></a>
 
 **Resource:**  
 - https://github.com/Cumulo-pro/Story_protocol/blob/main/monitoring_bot/story-external-watcher.py
@@ -184,7 +184,7 @@ Adds an additional monitoring layer from an external perspective, improving earl
 
 ---
 
-## ✍️ Technical Content & Education (Medium)
+## ✍️ Technical Content & Education (Medium) <a id="medium-content"></a>
 
 **Resources:**  
 - English: https://cumulo.pro/story/content  
@@ -203,7 +203,7 @@ Expands Story’s technical reach and understanding across a broader audience, i
 
 ---
 
-## ✅ Story Validator Uptime Proof
+## ✅ Story Validator Uptime Proof <a id="uptime-proof"></a>
 
 **Resource:** Validator Uptime Proof (on-chain, reproducible)  
 **Repository:**  
