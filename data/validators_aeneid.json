@@ -572,27 +572,7 @@
       "Interactive map for Story nodes": "https://metatarz.xyz/maps/devnet-1"
     }
 },
-    {
-    "name": "OwlStake",
-    "webservices": "https://services.owlstake.com/docs/mainnet/story/",
-    "x": "owlstake",
-    "validatorlogo": "owlstake.jpg",
-    "api": "https://story-1-api.owlstake.com:443",
-    "rpc": "https://story-1-rpc.owlstake.com:443",
-    "explorer": "https://story.explorers.guru/validators",
-    "peers": "8db87ee67cdf4c098d023e8f96d6156f098f0ae1@65.109.30.26:45656",
-    "seeds": "8db87ee67cdf4c098d023e8f96d6156f098f0ae1@65.109.30.26:45656",
-    "snapshot": "https://services.owlstake.com/docs/mainnet/story/snapshot",
-    "addrbook": "curl -Ls https://snapshots.owlstake.com/story-1/addrbook.json > $HOME/.story/story/config/addrbook.json",
-    "tools_url": {
-      "State sync": "https://services.owlstake.com/docs/mainnet/story/state-sync"
-    },
-     "content": {
-      "Installation Guide": "https://services.owlstake.com/docs/mainnet/story/installation",
-      "Useful commands": "https://services.owlstake.com/docs/mainnet/story/useful-commands"
-    }
-},
-    {
+   {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/story-aeneid/",
     "x": "Cumulo_pro",
