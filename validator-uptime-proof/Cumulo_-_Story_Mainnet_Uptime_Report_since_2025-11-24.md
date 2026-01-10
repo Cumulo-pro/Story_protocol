@@ -44,8 +44,8 @@ This method measures **actual participation in consensus**, which is the metric 
 
 ## Data source
 
-- **Archive RPC used:**  
-  https://rpc-archive.story.node75.org
+- **Uptime methodology and implementation details:**  
+  https://github.com/Cumulo-pro/Story_protocol/tree/main/validator-uptime-proof
 
 - **Analysis script:**  
   https://github.com/Cumulo-pro/Story_protocol/blob/main/validator-uptime-proof/story-uptime-since-date.sh
