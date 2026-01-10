@@ -279,11 +279,11 @@
     "webservices": "",
     "x": "OriginStake",
     "validatorlogo": "originstake.jpeg",
-    "api": "",
-    "rpc": "",
+    "api": "https://infra.originstake.com/story/rest",
+    "rpc": "https://infra.originstake.com/story/rpc",
     "grpc": "",
-    "evm": "",
-    "wss_cosmos": "",
+    "evm": "https://infra.originstake.com/story/evm",
+    "wss_cosmos": "wss://infra.originstake.com/story/ws",
     "wss_evm": "",
      "tools_url": {
           "ipworld dashboard": "https://ipworld.io/"
