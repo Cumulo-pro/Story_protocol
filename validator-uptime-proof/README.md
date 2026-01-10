@@ -68,7 +68,7 @@ sudo apt install -y curl jq screen
 
 ### 2) Add the script
 
-Create the file (`story-uptime-since-date.sh`)[https://github.com/Cumulo-pro/Story_protocol/blob/main/validator-uptime-proof/story-uptime-since-date.sh] and paste the script contents (see the script section below), then:
+Create the file (story-uptime-since-date.sh)[https://github.com/Cumulo-pro/Story_protocol/blob/main/validator-uptime-proof/story-uptime-since-date.sh] and paste the script contents (see the script section below), then:
 
 ```bash
 chmod +x story-uptime-since-date.sh
