@@ -582,7 +582,13 @@
     "tools_url": {
       "Story Metrics and Grafana Dashboard": "https://github.com/Cumulo-pro/Story_protocol/blob/main/monitoring/",
       "RPC Monitoring Tool": "https://cumulo.pro/services/story/rpcscan",
-      "Decentralized Peer Monitor": "https://cumulo.pro/services/story/peerscan"
+      "Decentralized Peer Monitor": "https://cumulo.pro/services/story/peerscan",
+      "Story Validator Uptime Proof": "https://github.com/Cumulo-pro/Story_protocol/tree/main/validator-uptime-proof",
+      "Story Validator Alerts Bot": "https://cumulo.pro/services/story/monitoring#bot"
+    },
+     "content": {
+      "Installation Guide": "https://cumulo.pro/services/story/install",
+      "Story Node CLI Command Reference": "https://cumulo.pro/services/story/cli"
     }
   }
   ]
