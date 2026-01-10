@@ -1,4 +1,4 @@
-# TECHNICAL CONTRIBUTIONS — Story Networks
+``# TECHNICAL CONTRIBUTIONS — Story Networks
 
 📌 **Networks:** Story mainnet & Aeneid testnet
 
@@ -19,6 +19,7 @@ This repository documents the technical contributions provided by **Cumulo** to 
 - [Validator Alerts Bot](#validator-alerts-bot)
 - [Story External Watcher Bot](#story-external-watcher-bot)
 - [Technical Content & Education (Medium)](#technical-content--education-medium)
+- [Story Validator Uptime Proof](#story-validator-uptime-proof)
 
 
 ![LINEA](https://github.com/user-attachments/assets/6cbf6840-7d91-482b-9f97-bdbaf8187e9f)
@@ -198,6 +199,28 @@ Expands Story’s technical reach and understanding across a broader audience, i
 - ~3.8K monthly presentations (Dec 2025)  
 - 700+ lifetime followers  
 - Growing base of email subscribers
+
+---
+
+## ✅ Story Validator Uptime Proof
+
+**Resource:** Validator Uptime Proof (on-chain, reproducible)  
+**Repository:**  
+https://github.com/Cumulo-pro/Story_protocol/tree/main/validator-uptime-proof
+
+**Description:**  
+Reproducible and **on-chain verifiable method** to calculate **Story Mainnet validator consensus uptime**, based exclusively on **block commit signatures** queried from an **archive RPC**.
+
+This tool measures **actual consensus participation** (whether a validator signs block commits when required), not server uptime, process uptime, or RPC availability.
+
+**Value for Story:**  
+Provides an auditable and reproducible **uptime proof** suitable for **delegation programs and validator evaluations**, based on the metric that truly matters for network security: **on-chain consensus participation**.
+
+**Key Properties:**  
+- Fully on-chain and explorer-independent  
+- Reproducible by any third party  
+- Does not rely on local node state  
+- Aligned with Cosmos-based validator evaluation standards  
 
 ---
 
