@@ -1,4 +1,4 @@
-``# TECHNICAL CONTRIBUTIONS — Story Networks
+# TECHNICAL CONTRIBUTIONS — Story Networks
 
 📌 **Networks:** Story mainnet & Aeneid testnet
 
@@ -13,13 +13,14 @@ This repository documents the technical contributions provided by **Cumulo** to 
 - [Validator Resources Directory](#validator-resources-directory)
 - [Story Snapshots](#story-snapshots)
 - [Validator Documentation (Guides)](#validator-documentation-guides)
-- [Story Grafana Metrics & Monitoring (v3)](#story-grafana-metrics--monitoring-v3)
+- [Story Grafana Metrics & Monitoring (v3)](#story-grafana-metrics-monitoring-v3)
 - [Story Activity Tracker](#story-activity-tracker)
 - [Public Endpoints](#public-endpoints)
 - [Validator Alerts Bot](#validator-alerts-bot)
 - [Story External Watcher Bot](#story-external-watcher-bot)
-- [Technical Content & Education (Medium)](#technical-content--education-medium)
+- [Technical Content & Education (Medium)](#technical-content-education-medium)
 - [Story Validator Uptime Proof](#story-validator-uptime-proof)
+
 
 
 ![LINEA](https://github.com/user-attachments/assets/6cbf6840-7d91-482b-9f97-bdbaf8187e9f)
