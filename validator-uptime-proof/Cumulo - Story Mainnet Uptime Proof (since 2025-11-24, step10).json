@@ -1,0 +1,14 @@
+{
+  "moniker": "Cumulo",
+  "chain": "Story Mainnet",
+  "rpc_used": "https://rpc-archive.story.node75.org",
+  "start_time_utc": "2025-11-24T00:00:00Z",
+  "cons_address_hex": "B93DD4D30F2837187D6BF66C6D53799F2E1A1272",
+  "start_height": 11143250,
+  "end_height": 12812927,
+  "sampling_step_blocks": 10,
+  "blocks_checked": 166968,
+  "commits_signed": 166624,
+  "estimated_uptime_percent": 99.794,
+  "note": "Estimated uptime calculated by sampling block commits in the height range and checking whether cons_address_hex appears in last_commit signatures."
+}
