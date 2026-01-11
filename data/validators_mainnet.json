@@ -27,7 +27,8 @@
      },
      "tools_url": {
         "Story Labs": "https://storyscan.app/labs",
-        "StoryAI": "https://storyscan.app/?lumi=true"
+        "StoryAI": "https://storyscan.app/?lumi=true",
+        "Validator uptime and stability reports for Story": "https://trackval.storyscan.app"
     }
   },
   {
