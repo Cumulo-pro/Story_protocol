@@ -573,6 +573,26 @@
     }
 },
    {
+    "name": "Unity Nodes",
+    "webservices": "https://unitynodes.gitbook.io/unity-nodes/testnet-network/story-aeneid",
+    "x": "unitynodes",
+    "validatorlogo": "unitynodes.jpg",
+    "evm": "https://evm.unitynodes.app/story-testnet",
+    "rpc": "https://rpc.unitynodes.app/story-testnet/",
+    "api": "https://api.unitynodes.app/story-testnet",
+    "explorer": "",
+    "wss_cosmos": "wss://wss.unitynodes.app/story-testnet/websocket",
+    "wss_evm": "wss://wss.unitynodes.app/evm-story-testnet/websocket",
+    "peers": "ec4e11263f3fc4cc2cb6874e2feda168fdb48b28@story-mainnet-peer.unitynodes.app:47656",
+    "seeds": "f92d81c3e0b4a7d65128e9f0a4c3b7d1e8a2b9c0@story-mainnet-seed.unitynodes.app:47656",
+    "snapshot": "https://unitynodes.gitbook.io/unity-nodes/testnet-network/story-aeneid/sync/snapshot-pruned",
+    "addrbook": "https://unitynodes.gitbook.io/unity-nodes/testnet-network/story-aeneid/sync/addrbook",
+   "content": {
+      "Manual installation": "https://unitynodes.gitbook.io/unity-nodes/testnet-network/story-aeneid/installation-aeneid",
+      "Useful commands": "https://unitynodes.gitbook.io/unity-nodes/testnet-network/story-aeneid/useful-commands"
+    }
+},
+   {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/story-aeneid/",
     "x": "Cumulo_pro",
