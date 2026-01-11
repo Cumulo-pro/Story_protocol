@@ -568,7 +568,7 @@
 },
     {
     "name": "Unity Nodes",
-    "webservices": "https://unityhub.dev/story/validator",
+    "webservices": "https://unitynodes.gitbook.io/unity-nodes/mainnet-network/story-story-1",
     "x": "unitynodes",
     "validatorlogo": "unitynodes.jpg",
     "evm": "https://evm.unitynodes.app/story-mainnet",
