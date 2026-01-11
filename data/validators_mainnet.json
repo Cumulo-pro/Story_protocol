@@ -64,7 +64,7 @@
     "wss_evm": "wss://story-mainnet-evmwss.mandragora.io",
     "snapshot": "https://hackmd.io/@bMLJfk-wRcus0zQNBavDTQ/r1Mc-eWhR#Apply-Mandragora-pruned-snapshot-gethstory",
     "snap_url" : "https://snapshots2.mandragora.io/story/story_snapshot.lz4",
-    "archival_snap": "https://hackmd.io/@mandragora/story-mainnet#Apply-Mandragora-archival-snapshot-gethstory",
+    "archive_snapshot": "https://hackmd.io/@mandragora/story-mainnet#Apply-Mandragora-archival-snapshot-gethstory",
     "addrbook": "https://snapshots.mandragora.io/addrbook.json",
     "tools": "Lost My Validator",
     "tools_url": {
@@ -353,7 +353,6 @@
   "api": "",
   "rpc": "",
   "grpc": "",
-  "archive_snapshot": "",
   "snapshot": "",
   "addrbook": "",
   "tools_url": {
@@ -461,7 +460,6 @@
     "validatorlogo": "validexis.jpg",
     "explorer": "",
     "snapshot": "",
-    "archive_snapshot": "",
     "bridge_snap": "",
     "peers": "",
     "api": "",
