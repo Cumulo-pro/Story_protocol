@@ -546,7 +546,7 @@
     "snapshot": "https://www.polkachu.com/tendermint_snapshots/story",
     "addrbook": "https://www.polkachu.com/addrbooks/story"
 },
-     {
+  {
     "name": "OwlStake",
     "webservices": "https://services.owlstake.com/docs/mainnet/story/",
     "x": "owlstake",
@@ -557,13 +557,33 @@
     "peers": "8db87ee67cdf4c098d023e8f96d6156f098f0ae1@65.109.30.26:45656",
     "seeds": "8db87ee67cdf4c098d023e8f96d6156f098f0ae1@65.109.30.26:45656",
     "snapshot": "https://services.owlstake.com/docs/mainnet/story/snapshot",
-    "addrbook": "curl -Ls https://snapshots.owlstake.com/story-1/addrbook.json > $HOME/.story/story/config/addrbook.json",
+    "addrbook": "https://snapshots.owlstake.com/story-1/addrbook.json",
     "tools_url": {
       "State sync": "https://services.owlstake.com/docs/mainnet/story/state-sync"
     },
      "content": {
       "Installation Guide": "https://services.owlstake.com/docs/mainnet/story/installation",
       "Useful commands": "https://services.owlstake.com/docs/mainnet/story/useful-commands"
+    }
+},
+    {
+    "name": "Unity Nodes",
+    "webservices": "https://unityhub.dev/story/validator",
+    "x": "unitynodes",
+    "validatorlogo": "unitynodes.jpg",
+    "evm": "https://evm.unitynodes.app/story-mainnet",
+    "rpc": "https://rpc.unitynodes.app/story-mainnet/",
+    "api": "https://api.unitynodes.app/story-mainnet",
+    "explorer": "",
+    "wss_cosmos": "wss://wss.unitynodes.app/story-mainnet/websocket",
+    "wss_evm": "wss://wss.unitynodes.app/evm-story-mainnet/websocket",
+    "peers": "ec4e11263f3fc4cc2cb6874e2feda168fdb48b28@story-mainnet-peer.unitynodes.app:47656",
+    "seeds": "f92d81c3e0b4a7d65128e9f0a4c3b7d1e8a2b9c0@story-mainnet-seed.unitynodes.app:47656",
+    "snapshot": "https://unitynodes.gitbook.io/unity-nodes/mainnet-network/story-story-1/sync/snapshot-pruned",
+    "addrbook": "https://unitynodes.gitbook.io/unity-nodes/mainnet-network/story-story-1/sync/addrbook",
+   "content": {
+      "Manual installation": "https://unitynodes.gitbook.io/unity-nodes/mainnet-network/story-story-1/installation-mainnet",
+      "Useful commands": "https://unitynodes.gitbook.io/unity-nodes/mainnet-network/story-story-1/useful-commands"
     }
 },
  {
