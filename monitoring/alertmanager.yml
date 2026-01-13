@@ -1,239 +1,34 @@
-{
-  "apiVersion": 1,
-  "contactPoints": [
-    {
-      "orgId": 1,
-      "name": "default-telegram",
-      "receivers": [
-        {
-          "uid": "telegram-default",
-          "type": "telegram",
-          "settings": {
-            "bottoken": "__TELEGRAM_BOT_TOKEN__",
-            "chatid": "__TELEGRAM_CHAT_ID__",
-            "message": "{{ template \"cumulo.alert.message\" . }}"
-          },
-          "disableResolveMessage": false
-        }
-      ]
-    },
-    {
-      "orgId": 1,
-      "name": "default-discord",
-      "receivers": [
-        {
-          "uid": "discord-default",
-          "type": "webhook",
-          "settings": {
-            "url": "__DISCORD_WEBHOOK_URL__",
-            "httpMethod": "POST",
-            "maxAlerts": "0",
-            "username": "Grafana Alerts",
-            "title": "Cumulo Alerts",
-            "message": "{{ template \"cumulo.alert.message\" . }}"
-          },
-          "disableResolveMessage": false
-        }
-      ]
-    },
-    {
-      "orgId": 1,
-      "name": "default-email",
-      "receivers": [
-        {
-          "uid": "email-default",
-          "type": "email",
-          "settings": {
-            "addresses": "__EMAIL_TO__",
-            "singleEmail": true,
-            "message": "{{ template \"cumulo.alert.message\" . }}"
-          },
-          "disableResolveMessage": false
-        }
-      ]
-    }
-  ],
-  "notificationPolicies": [
-    {
-      "orgId": 1,
-      "receiver": "default-telegram",
-      "group_by": [
-        "alertname",
-        "job",
-        "instance",
-        "chain_id",
-        "severity"
-      ],
-      "group_wait": "30s",
-      "group_interval": "3m",
-      "repeat_interval": "2h",
-      "routes": [
-        {
-          "receiver": "default-telegram",
-          "object_matchers": [
-            ["severity", "=", "critical"]
-          ],
-          "continue": true
-        },
-        {
-          "receiver": "default-discord",
-          "object_matchers": [
-            ["severity", "=", "warning"]
-          ],
-          "continue": true
-        },
-        {
-          "receiver": "default-email",
-          "object_matchers": [
-            ["severity", "=", "info"]
-          ],
-          "continue": false
-        }
-      ]
-    }
-  ],
-  "muteTimings": [],
-  "templates": [
-    {
-      "orgId": 1,
-      "name": "cumulo-templates",
-      "template": "{{ define \"cumulo.alert.message\" }}\n{{- $labels := .CommonLabels -}}\n🚨 *{{ $labels.alertname }}* ({{ $labels.severity }})\n\n• Job: `{{ $labels.job }}`\n• Instance: `{{ $labels.instance }}`\n{{- if $labels.chain_id }}• Chain: `{{ $labels.chain_id }}`\n{{- end }}\n\n{{- if .CommonAnnotations.summary }}📝 {{ .CommonAnnotations.summary }}\n{{- end }}\n{{- if .CommonAnnotations.description }}\n{{ .CommonAnnotations.description }}\n{{- end }}\n\n⏱️ Starts at: {{ .StartsAt }}\n{{- if .EndsAt }}\n✅ Ends at: {{ .EndsAt }}\n{{- end }}\n{{ end }}\n"
-    }
-  ],
-  "groups": [
-    {
-      "orgId": 1,
-      "name": "Cumulo-CometBFT-Consensus",
-      "folder": "Monitoring",
-      "interval": "30s",
-      "rules": [
-        {
-          "uid": "up-down",
-          "title": "Node down (Prometheus up == 0)",
-          "condition": "C",
-          "data": [
-            {
-              "refId": "A",
-              "relativeTimeRange": { "from": 300, "to": 0 },
-              "datasourceUid": "__PROM_DS_UID__",
-              "model": {
-                "expr": "up{job=\"__JOB__\"} == 0",
-                "legendFormat": "{{instance}}",
-                "refId": "A"
-              }
-            },
-            {
-              "refId": "C",
-              "datasourceUid": "__expr__",
-              "model": {
-                "type": "classic_conditions",
-                "conditions": [
-                  {
-                    "type": "query",
-                    "query": { "params": ["A"] },
-                    "reducer": { "type": "last" },
-                    "evaluator": { "type": "gt", "params": [0] },
-                    "operator": { "type": "and" }
-                  }
-                ]
-              }
-            }
-          ],
-          "for": "2m",
-          "annotations": {
-            "summary": "Prometheus target is down (up = 0)",
-            "description": "The target `{{ $labels.instance }}` is not responding to Prometheus scrapes or the exporter is down."
-          },
-          "labels": {
-            "severity": "critical",
-            "job": "__JOB__"
-          }
-        },
-        {
-          "uid": "syncing-too-long",
-          "title": "Node syncing for too long",
-          "condition": "C",
-          "data": [
-            {
-              "refId": "A",
-              "relativeTimeRange": { "from": 900, "to": 0 },
-              "datasourceUid": "__PROM_DS_UID__",
-              "model": {
-                "expr": "cometbft_blocksync_syncing{job=\"__JOB__\"} == 1",
-                "legendFormat": "{{instance}}",
-                "refId": "A"
-              }
-            },
-            {
-              "refId": "C",
-              "datasourceUid": "__expr__",
-              "model": {
-                "type": "classic_conditions",
-                "conditions": [
-                  {
-                    "type": "query",
-                    "query": { "params": ["A"] },
-                    "reducer": { "type": "last" },
-                    "evaluator": { "type": "gt", "params": [0] },
-                    "operator": { "type": "and" }
-                  }
-                ]
-              }
-            }
-          ],
-          "for": "20m",
-          "annotations": {
-            "summary": "Node remains in syncing / catching up state",
-            "description": "The node `{{ $labels.instance }}` has been syncing (catching_up) for more than 20 minutes."
-          },
-          "labels": {
-            "severity": "warning",
-            "job": "__JOB__"
-          }
-        },
-        {
-          "uid": "height-stall",
-          "title": "Consensus stall (height not increasing)",
-          "condition": "C",
-          "data": [
-            {
-              "refId": "A",
-              "relativeTimeRange": { "from": 360, "to": 0 },
-              "datasourceUid": "__PROM_DS_UID__",
-              "model": {
-                "expr": "increase(cometbft_consensus_height{job=\"__JOB__\"}[3m])",
-                "legendFormat": "{{instance}}",
-                "refId": "A"
-              }
-            },
-            {
-              "refId": "C",
-              "datasourceUid": "__expr__",
-              "model": {
-                "type": "classic_conditions",
-                "conditions": [
-                  {
-                    "type": "query",
-                    "query": { "params": ["A"] },
-                    "reducer": { "type": "last" },
-                    "evaluator": { "type": "lt", "params": [1] },
-                    "operator": { "type": "and" }
-                  }
-                ]
-              }
-            }
-          ],
-          "for": "5m",
-          "annotations": {
-            "summary": "Consensus height is not advancing",
-            "description": "The consensus height on `{{ $labels.instance }}` has not increased within the expected time window."
-          },
-          "labels": {
-            "severity": "critical",
-            "job": "__JOB__"
-          }
-        }
-      ]
-    }
-  ]
-}
+route:
+  group_by: ['alertname', 'severity']
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 1h
+  receiver: 'telegram_story'
+
+  routes:
+    - match:
+        alert_source: "story"
+        severity: "critical"
+      receiver: 'telegram_story'
+
+    - match:
+        alert_source: "story"
+        severity: "warning"
+      receiver: 'telegram_story'
+
+    - match:
+        alert_source: "story"
+        severity: "info"
+      receiver: 'telegram_story'
+
+receivers:
+  - name: 'telegram_story'
+    telegram_configs:
+      - bot_token: '<YOUR_BOT_TOKEN>'
+        chat_id: <YOUR_CHAT_ID>
+        parse_mode: "Markdown"
+        message: |
+          {{ range .Alerts }}
+          📡 [{{ .Status }}] *{{ .Labels.alertname }}* ({{ .Labels.severity | toUpper }})
+          *Description*: {{ .Annotations.description }}
+          {{ end }}
