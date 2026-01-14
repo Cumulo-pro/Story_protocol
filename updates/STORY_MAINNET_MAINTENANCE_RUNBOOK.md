@@ -4,7 +4,7 @@
 🗓 **January 14, 2026 — 23:30 UTC**  
 ⏳ Expected downtime: **24–48 hours**
 
-This document describes the **production-grade procedure** used by **Cumulo** to safely halt and later restart Story Mainnet validator infrastructure during the scheduled maintenance announced by the Story team.
+This document describes the **production-grade procedure** used by **Cumulo** to safely halt and later restart **Story Mainnet validator infrastructure** during the scheduled maintenance announced by the Story team.
 
 ---
 
@@ -17,7 +17,7 @@ During the maintenance window:
 
 ### What’s happening
 - **Infrastructure migration to AWS**  
-- **Fusaka upgrade** (`story-geth v1.2.0`, including **EIP-7702**)
+- **Fusaka upgrade** (**story-geth v1.2.0**, including **EIP-7702**)
 
 ### Required actions
 - **Validators & Node Operators**  
@@ -36,22 +36,28 @@ This runbook applies to:
 
 It **does NOT** apply to:
 
-- Public RPC nodes
-- Snapshot or archive-only nodes  
+- Public RPC nodes (per the official announcement, RPC providers keep nodes running)
+- Snapshot or archive-only nodes
 
 ---
 
 ## 🧭 Design Principles
 
-- **UTC-only coordination**
+- **UTC-only coordination** (avoid local timezone mistakes across regions)
 - **No `halt_height` / `halt_time`** (not supported by Story configs)
 - **systemd-native scheduling**
-- **Zero chance of accidental restart**
-- **Auditable, reproducible, production-safe**
+- **STOP + DISABLE** (halt at a precise time and prevent auto-start on reboot)
+- **Auditable and reproducible** (visible in `systemctl list-timers`)
+- **Single-operator friendly**: services are *disabled* but can still be started manually — operator must wait for the official “all-clear”
+
+> Note: `disabled` prevents automatic start (boot/targets), but does **not** block a manual `systemctl start/restart`.  
+> If you need an absolute “start lock”, use a temporary systemd override. Cumulo does **not** require that for single-operator ops.
 
 ---
 
 ## ✅ Preconditions
+
+Verify UTC and NTP:
 
 ```bash
 timedatectl
@@ -66,22 +72,24 @@ Expected:
 
 ## 🛠️ Halt Strategy (Production-Grade)
 
-**Method:** `systemd timer` + **STOP + MASK**
+**Method:** `systemd timer` + **STOP + DISABLE**
 
 ---
 
-## 1️⃣ Create the maintenance halt service
+## 1️⃣ Create the maintenance halt service (STOP + DISABLE)
+
+This unit will **stop** both services and **disable** them in the same action.
 
 ```bash
 sudo tee /etc/systemd/system/story-maintenance-halt.service >/dev/null <<'EOF'
 [Unit]
-Description=Story Maintenance Halt (stop + mask story and story-geth)
+Description=Story Maintenance Halt (stop + disable story and story-geth)
 Wants=network-online.target
 After=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash -lc 'set -e; systemctl stop story story-geth; systemctl mask story story-geth'
+ExecStart=/bin/systemctl disable --now story.service story-geth.service
 EOF
 ```
 
@@ -124,36 +132,86 @@ systemctl status story-maintenance-halt.timer
 
 ## ⏱ What Happens at 23:30 UTC
 
+systemd will execute:
+
 ```bash
-systemctl stop story story-geth
-systemctl mask story story-geth
+systemctl disable --now story.service story-geth.service
+```
+
+Which results in:
+
+- `story` and `story-geth` stop cleanly
+- both units become **disabled** (won’t auto-start on reboot)
+
+---
+
+## 🔎 Post-Halt Verification
+
+Confirm both services are stopped:
+
+```bash
+systemctl status story story-geth --no-pager
+```
+
+Confirm both services are disabled:
+
+```bash
+systemctl is-enabled story
+systemctl is-enabled story-geth
+```
+
+Expected output:
+
+```text
+disabled
+disabled
 ```
 
 ---
 
 ## 🚫 During the Maintenance Window
 
-- Do not restart validator services
-- Ignore block-production alerts
-- Prepare `story-geth v1.2.0` upgrade **without starting services**
+- Do **not** restart validator services (`story`, `story-geth`)
+- Ignore block-production alerts (expected while stopped)
+- You may prepare the `story-geth v1.2.0` upgrade **without starting services**
+- Wait for the official “all-clear” from Story (Discord + X)
 
 ---
 
 ## 🔓 Recovery Procedure (After All-Clear)
 
+### 1) Re-enable services
+
 ```bash
-sudo systemctl unmask story story-geth
+sudo systemctl enable story story-geth
+```
+
+### 2) Disable and remove the maintenance timer (clean-up)
+
+```bash
 sudo systemctl disable --now story-maintenance-halt.timer
 sudo rm -f /etc/systemd/system/story-maintenance-halt.service
 sudo rm -f /etc/systemd/system/story-maintenance-halt.timer
 sudo systemctl daemon-reload
 ```
 
-Start services:
+### 3) Start services (recommended order)
+
+Start Execution (EVM) first:
 
 ```bash
 sudo systemctl start story-geth
+```
+
+Wait a few seconds:
+
+```bash
 sleep 10
+```
+
+Start Consensus:
+
+```bash
 sudo systemctl start story
 ```
 
@@ -161,15 +219,31 @@ sudo systemctl start story
 
 ## 4️⃣ Post-Restart Verification
 
+### Logs
+
+```bash
+sudo journalctl -u story-geth -f
+```
+
+In another terminal:
+
+```bash
+sudo journalctl -u story -f
+```
+
+### Sync status (CometBFT)
+
+> Adjust port if your local RPC is not `26657`.
+
 ```bash
 curl -s localhost:26657/status | jq .result.sync_info
 ```
 
 ---
 
-## 🏁 Final Status
+## 🏁 Final Status Checklist
 
-✔ Validator halted safely  
-✔ Restart fully controlled  
-✔ UTC-coordinated  
-✔ Production-grade procedure
+- ✔ Validator halted safely at the agreed UTC time  
+- ✔ Services remained stopped during the window  
+- ✔ Restart executed only after official confirmation  
+- ✔ Procedure is auditable and reproducible via systemd  
