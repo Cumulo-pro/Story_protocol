@@ -585,6 +585,20 @@
       "Useful commands": "https://unitynodes.gitbook.io/unity-nodes/mainnet-network/story-story-1/useful-commands"
     }
 },
+       {
+  "name": "cryptomolot",
+  "webservices": "https://cryptomolot.gitbook.io/cryptomolot-docs/mainnets/story-protocol",
+  "x": "cryptomolot",
+  "validatorlogo": "cryptomolot.jpg",
+  "tools": "Monitoring tool",
+  "tools_url": {
+    "Monitoring tool": "https://cryptomolot.gitbook.io/cryptomolot-docs/mainnets/story-protocol/monitoring-in-docker"
+  },
+  "content":{
+    "Installation Guide": "https://cryptomolot.gitbook.io/cryptomolot-docs/mainnets/story-protocol/validator-runbook",
+    "Cheatsheet": "https://cryptomolot.gitbook.io/cryptomolot-docs/mainnets/story-protocol/cheatsheet"
+  }
+},
  {
     "name": "Cumulo",
     "webservices": "https://cumulo.pro/services/story/",
