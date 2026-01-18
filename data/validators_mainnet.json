@@ -558,7 +558,10 @@
     "tools_url": {
         "Statesync": "https://stakeup.tech/services/mainnet/story",
         "RPC Scanner": "https://stakeup.tech/services/mainnet/story"
-    }
+    },
+   "tools_desc": {
+           "RPC Scanner": "Tool to scan and validate RPC endpoints for availability, latency, and basic reliability signals."
+     }
   },
       {
     "name": "CoinHunters",
