@@ -29,8 +29,13 @@
         "Story Labs": "https://storyscan.app/labs",
         "StoryAI": "https://storyscan.app/?lumi=true",
         "Validator uptime and stability reports for Story": "https://trackval.storyscan.app"
-    }
-  },
+    },
+    "tools_desc": {
+       "Story Labs": "Operational utilities portal providing installation guides, upgrade instructions, snapshots, and other resources for Story node operators.",
+       "StoryAI": "Assisted interface to explore and query Story ecosystem information, aimed at both users and operational insights.",
+       "Validator uptime and stability reports for Story": "Analytics dashboard tracking validator uptime, stability, and performance across the Story network."
+     }
+   },
   {
     "name": "Oneiric Stake",
     "webservices": "",
@@ -69,8 +74,11 @@
     "tools": "Lost My Validator",
     "tools_url": {
       "Lost My Validator": "https://github.com/McDaan/general/blob/main/story/lostmyvalidator.sh"
-    }
-  },
+    },
+     "tools_desc": {
+      "Lost My Validator": "Recovery and troubleshooting script intended to help operators diagnose issues and restore a stuck or unhealthy Story validator."
+     }
+    },
   {
     "name": "SILENT",
     "webservices": "https://services.silentvalidator.com/docs/category/story",
@@ -91,8 +99,13 @@
       "Story Node Finder": "https://services.silentvalidator.com/docs/mainnets/story/Tools#story-node-finder",
       "Story Ansible": "https://services.silentvalidator.com/docs/mainnets/story/Tools#story-ansible",
       "Story Grafana Dashboard": "https://services.silentvalidator.com/docs/mainnets/story/Tools#story-grafana-dashboard"
-    }
-},
+    },
+     "tools_desc": {
+      "Story Node Finder": "Tool to discover and verify Story nodes/endpoints, useful for connectivity checks and troubleshooting.",
+      "Story Ansible": "Ansible playbooks to automate Story node deployment, upgrades, and routine operational tasks.",
+      "Story Grafana Dashboard": "Prebuilt Grafana dashboards for monitoring Story node and validator metrics."
+   }
+  },
   {
     "name": "NodeStake",
     "webservices": "https://nodestake.org/story",
@@ -161,7 +174,11 @@
       "tools_url": {
       "Cosmovisor setup": "https://services.node75.org/papers/guide_setup_cosmovisor",
       "Monitoring dashboard": "https://github.com/the-node75/mon_story"
-    }
+    },
+     "tools_desc": {
+       "Cosmovisor setup": "Guide to configure Cosmovisor for automated binary management and smoother chain upgrades.",
+       "Monitoring dashboard": "Monitoring setup and dashboards to track Story node/validator health and performance."
+  }
   },
    {
     "name": "Coha05",
@@ -200,8 +217,13 @@
        "CommunityApp": "https://ipstoryhub.org/",
        "State Sync": "https://noders.services/mainnet/story/statesync",
        "Story Monitoring Setup": "https://noders.services/mainnet/story/monitoring"
-    }      
-  },
+    },
+   "tools_desc": {
+        "CommunityApp": "Community portal and explorer-style interface with Story network tools and resources.",
+        "State Sync": "State sync instructions and endpoints for faster node synchronization.",
+        "Story Monitoring Setup": "Guides and configuration for setting up monitoring (metrics, dashboards, and alerts) for Story nodes."
+     }
+   },
     {
     "name": "Cosmic Validator",
     "webservices": "https://github.com/CosmicValidator/Story-Aeneid/blob/main/README.md",
@@ -216,7 +238,10 @@
      "wss_cosmos": "wss://story-rpc.cosmicvalidator.com/websocket",
      "tools_url": {
        "State-sync": "https://github.com/CosmicValidator/Story-Mainnet/tree/main?tab=readme-ov-file#state-sync"
-      }
+      },
+      "tools_desc": {
+       "State-sync": "State sync guide and parameters to bootstrap a Story node quickly without a full sync."
+        }
     },
    {
     "name": "Nodefleet",
@@ -247,7 +272,11 @@
         "tools_url": {
             "Validator Performance Dashboard": "https://story-dashboard.krews.xyz/story/validator-status",
             "Decentralization Map": "https://story-dashboard.krews.xyz/story/decentralization"
-        }
+        },
+    "tools_desc": {
+       "Validator Performance Dashboard": "Dashboard showing validator status, uptime, and performance indicators over time.",
+       "Decentralization Map": "Visualization of network decentralization, including geographic and infrastructure distribution."
+    }
     },
   {
   "name": "ITRocket",
@@ -271,6 +300,13 @@
     "ITRocket Community Tab for Story Testnet & Mainnet": "https://itrocket.net/services/mainnet/story/community/useful-tools/",
     "Validator Monitoring Bot": "https://t.me/story_itrocket_bot"
     },
+ "tools_desc": {
+      "Validators Performance Dashboard": "Analytics dashboard comparing validator performance and reliability over time.",
+      "Public RPC scanner": "Scanner that checks public RPC endpoints for availability, latency, and reliability.",
+      "Node & Validator Monitoring Script": "Monitoring scripts to track node health, sync status, and validator performance.",
+      "ITRocket Community Tab for Story Testnet & Mainnet": "Community hub with curated guides, tools, and references for Story operators.",
+      "Validator Monitoring Bot": "Telegram bot that delivers real-time alerts about validator status and network events."
+   },
     "content": {
         "Installation Guide": "https://itrocket.net/services/mainnet/story/installation/"
     }
@@ -288,7 +324,10 @@
     "wss_evm": "",
      "tools_url": {
           "ipworld dashboard": "https://ipworld.io/"
-       }
+       },
+   "tools_desc": {
+        "ipworld dashboard": "Ecosystem dashboard providing insights into Story network activity and infrastructure."
+    }
   },
     {
     "name": "Endorphine Stake",
@@ -306,6 +345,11 @@
           "License Checker": "https://x.com/endorphinestake/status/1967930807533666389",
           "EFK Monitoring": "https://github.com/endorphinestake/story-efk"
        },
+    "tools_desc": {
+        "Buzznodes: monitoring stack that uses VoIP channels": "Monitoring stack that can deliver node and validator alerts via VoIP-based notification channels.",
+        "License Checker": "Resource to verify licensing/eligibility status referenced by the operator.",
+        "EFK Monitoring": "Elasticsearch–Fluentd–Kibana stack for centralized log collection, search, and analysis."
+   },
     "content": {
        "Footsteps of Story Validators": "https://drive.google.com/file/d/1vYMvieVCq65JUUy4FvVzoF3CfUAlobYG"
       }  
@@ -341,7 +385,11 @@
   "tools_url": {
   "Story Faucet": "https://stakely.io/es/faucet/story-ip",
   "Node as a service": "https://app.stakely.io/naas?protocol=STORY"
-  }
+  },
+"tools_desc": {
+    "Story Faucet": "Faucet page to request Story test tokens (when available) for development and testing.",
+    "Node as a service": "Managed node offering (NaaS) to run Story infrastructure without self-hosting."
+    }
 },
    {
   "name": "F5 Nodes",
@@ -356,10 +404,14 @@
   "snapshot": "",
   "addrbook": "",
   "tools_url": {
-  "Story Wiki": "https://wiki.f5nodes.com/story/",
-   "Story Endpoints Ninja" : "https://story.endpoints.ninja/"
-  }
-},
+       "Story Wiki": "https://wiki.f5nodes.com/story/",
+        "Story Endpoints Ninja" : "https://story.endpoints.ninja/"
+  },
+  "tools_desc": {
+       "Story Wiki": "Community-maintained wiki documenting Story protocol, tooling, and operational knowledge.",
+       "Story Endpoints Ninja": "Directory and testing platform for Story RPC/API endpoints."
+    }
+  },
    {
     "name": "Lavender.Five Nodes",
     "webservices": "https://www.lavenderfive.com/networks/story",
@@ -399,6 +451,13 @@
       "Story Consensus Upgrade Metrics": "https://github.com/trusted-point/Story-Consensus-Metrics",
       "Story REST API": "https://github.com/trusted-point/Story-Rest-API"
     },
+   "tools_desc": {
+       "API": "Public API endpoint providing access to Story network data.",
+       "Rich Consensus Dashboard": "Advanced dashboard visualizing consensus metrics and validator participation.",
+       "Story Consensus Upgrade Metrics": "Metrics and dashboards focused on monitoring consensus upgrades and protocol changes.",
+       "Story REST API": "REST API tooling/implementation exposing Story blockchain data and utilities.",
+       "Story Validator Tools & Operations Guide": "Operations guide covering Story validator tooling, procedures, and best practices."
+     },
     "content": {
        "Story Validator Tools & Operations Guide": "https://github.com/trusted-point/Story-Tools"
      }
@@ -417,7 +476,11 @@
    "tools_url": {
       "Bech32 Tool": "https://tools.synergynodes.com",
       "State-sync": "https://www.synergynodes.com/service/story"
-    }
+    },
+  "tools_desc": {
+     "Bech32 Tool": "Utility to convert and validate Bech32 addresses commonly used in Cosmos-based networks.",
+     "State-sync": "State sync references and endpoints to accelerate Story node synchronization."
+   }
 },
   {
     "name": "Blockhunters",
@@ -433,6 +496,9 @@
    "tools_url": {
       "State Sync": "https://blockhunters.dev/mainnet/story/state-sync"
     },
+    "tools_desc": {
+         "State Sync": "State sync guide and endpoints for fast node bootstrap without a full sync."
+   },
     "content": {
        "Manual Instalation": "https://blockhunters.dev/mainnet/story/install"
      }
@@ -451,7 +517,11 @@
    "tools_url": {
       "Grafana Dashboard": "https://grafana.com/grafana/dashboards/22081-story-validator-dashboard-by-despread/",
       "Node Auto Installer": "https://vp.despreadlabs.io/explorer/mainnet/story"
-    }
+    },
+  "tools_desc": {
+       "Grafana Dashboard": "Grafana dashboard template for monitoring Story validator/node metrics.",
+       "Node Auto Installer": "Automated installer to deploy a Story node with minimal manual steps."
+       }
 },
    {
     "name": "Validexis",
@@ -530,6 +600,12 @@
       "Story Installer": "https://github.com/DTEAMTECH/story-installer",
       "Chat GPT assistant for Story Protocol": "https://chatgpt.com/g/g-673b6f19371481919fe8b41d62d0d83d-story-protocol-assistant-by-dteam"
     },
+   "tools_desc": {
+       "state-sync": "State sync instructions and endpoints to speed up Story node synchronization.",
+      "Story IP Graph Visualization": "Graph-based visualization of IP relationships and activity within the Story ecosystem.",
+       "Story Installer": "Installer tool to automate Story node deployment.",
+      "Chat GPT assistant for Story Protocol": "AI assistant resource to help answer Story protocol questions and operational topics."
+    },
     "content": {
       "Installation Guide": "https://dteam.tech/services/installation-guide/story/mainnet"
     }
@@ -560,6 +636,9 @@
     "tools_url": {
       "State sync": "https://services.owlstake.com/docs/mainnet/story/state-sync"
     },
+  "tools_desc": {
+       "State sync": "State sync documentation and endpoints for fast node bootstrap."
+        },
      "content": {
       "Installation Guide": "https://services.owlstake.com/docs/mainnet/story/installation",
       "Useful commands": "https://services.owlstake.com/docs/mainnet/story/useful-commands"
@@ -594,6 +673,9 @@
   "tools_url": {
     "Monitoring tool": "https://cryptomolot.gitbook.io/cryptomolot-docs/mainnets/story-protocol/monitoring-in-docker"
   },
+ "tools_desc": {
+    "Monitoring tool": "Monitoring guide/tooling to run node and validator observability in a Docker-based setup."
+  },
   "content":{
     "Installation Guide": "https://cryptomolot.gitbook.io/cryptomolot-docs/mainnets/story-protocol/validator-runbook",
     "Cheatsheet": "https://cryptomolot.gitbook.io/cryptomolot-docs/mainnets/story-protocol/cheatsheet"
@@ -619,6 +701,13 @@
       "Story Validator Uptime Proof": "https://github.com/Cumulo-pro/Story_protocol/tree/main/validator-uptime-proof",
       "Story Validator Alerts Bot": "https://cumulo.pro/services/story/monitoring#bot"
     },
+   "tools_desc": {
+     "Story Metrics and Grafana Dashboard": "Monitoring stack and dashboards (Prometheus/Grafana) to observe Story validator and node health and performance.",
+     "RPC Monitoring Tool": "Public endpoint scanner to measure RPC availability, latency, and basic reliability signals.",
+     "Decentralized Peer Monitor": "Peer analysis tool to help operators identify stable peers and improve node connectivity.",
+        "Story Validator Uptime Proof": "Repository and templates for producing operational uptime proofs and validator reporting artifacts.",
+  "Story Validator Alerts Bot": "Alerting bot that notifies operators about critical events (downtime, sync issues, degradations) for fast response."
+     },
      "content": {
       "Installation Guide": "https://cumulo.pro/services/story/install",
       "Story Node CLI Command Reference": "https://cumulo.pro/services/story/cli"
