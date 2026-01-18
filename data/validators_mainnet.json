@@ -525,19 +525,26 @@
 },
    {
     "name": "Validexis",
-    "webservices": "",
+    "webservices": "https://storyinfra.tech/",
     "x": "validexis",
     "validatorlogo": "validexis.jpg",
     "explorer": "",
-    "snapshot": "",
-    "bridge_snap": "",
-    "peers": "",
-    "api": "",
-    "rpc": "",
-    "grpc": "",
+    "snapshot": "https://snapshots1.validexis.com/story-mainnet/snap_story.tar.lz4",
+    "seeds": "249de5c0085eb175da6ad7031f96bfc3ad751e33@story-mainnet-seed.validexis.com:35656",
+    "peers": "607f17f8be461d5b204361df8d18a06d2c7b66c9@story-mainnet-peer.validexis.com:35656",
+    "api": "https://api-story-mainnet.validexis.com",
+    "rpc": "https://rpc-story-mainnet.validexis.com",
+    "grpc": "grpc-story-mainnet.validexis.com",
     "tools_url": {
-        "STORYINFRA — Story Network & IP Intelligence Platform": "https://storyinfra.tech/"
-    }
+        "STORYINFRA — Story Network & IP Intelligence Platform": "https://storyinfra.tech/",
+      "StoryUltraBot": "https://storyinfra.tech/",
+        "AI Assistant": "https://storyinfra.tech/"
+    },
+    "tools_desc": {
+       "STORYINFRA — Story Network & IP Intelligence Platform": "Infrastructure and intelligence platform for the Story network, providing validator insights, on-chain analytics, monitoring data, and operational resources.",
+       "StoryUltraBot": "Telegram bot delivering real-time staking insights, validator status, alerts for missed blocks or voting power changes, and ecosystem notifications.",
+       "AI Assistant": "AI-powered assistant trained on Story on-chain data and validator metrics, offering node diagnostics, validator analytics, anomaly detection, and operator-focused recommendations."
+     }
   },
     {
     "name": "StakeUp",
