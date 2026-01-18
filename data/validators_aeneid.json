@@ -264,7 +264,7 @@
       "Monitoring": "Monitoring dashboards to track node health and service availability.",
       "Faucet": "A faucet to request test tokens for Story testnet usage.",
       "Autoinstall": "One-shot install script to automate Story node setup on the testnet."
-    },
+    }
   },
     {
     "name": "Auranode",
@@ -558,7 +558,7 @@
     },
     "tools_desc": {
       "Story Node Monitor": "A monitoring page/tooling reference to observe node status and operational health checks."
-    }
+    },
     "tools_url": {
         "Story Validator Bot": "https://t.me/storyvalidator_bot"
     }
@@ -580,7 +580,7 @@
     },
     "tools_desc": {
       "Story Node Monitor": "A monitoring page/tooling reference to observe node status and operational health checks"
-    }
+    },
     "tools_url": {
       "Story Node Monitor": "https://docs.blocknth.com/docs/tools/chainmonidtor"
     }
