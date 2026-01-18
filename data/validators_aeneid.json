@@ -63,6 +63,11 @@
       "Story Node Finder": "https://services.silentvalidator.com/docs/Testnets/story/Tools#story-node-finder",
       "Story Ansible": "https://services.silentvalidator.com/docs/Testnets/story/Tools#story-ansible",
       "Story Grafana Dashboard": "https://services.silentvalidator.com/docs/Testnets/story/Tools#story-grafana-dashboard"
+    },
+   "tools_desc": {
+      "Story Node Finder": "A quick discovery tool to locate Story testnet endpoints (RPC/API/gRPC) and useful network resources.",
+      "Story Ansible": "An Ansible-based automation setup to provision, configure, and maintain Story nodes consistently.",
+      "Story Grafana Dashboard": "Ready-to-use Grafana dashboards to monitor node health, performance, and validator-related signals."
     }
 },
    {
@@ -101,6 +106,13 @@
        "Story Protocol Validator Competition": " https://storytable.coinsspor.com/",
        "Node center": "https://nodescenter.coinsspor.com/"
     },
+    "tools_desc": {
+      "Story Aeneid Mini Explorer": "A lightweight explorer-style UI for quick on-chain lookups on the Aeneid testnet.",
+      "Auto Install Tool": "Automated scripts to install and bootstrap a Story Aeneid node faster and with fewer manual steps.",
+      "Story Aeneid Validator Table": "A public table/view to compare validators, endpoints, and related operational resources.",
+      "Story Protocol Validator Competition": "A dedicated page to track validator competition-related information, ranking, or activity.",
+      "Node center": "A hub-style portal with shortcuts to node tools, resources, and operational pages."
+    },
    "content": {
       "Story Protocol Aeneid Testnet Complete Node Setup Guide": "https://github.com/coinsspor/Story-Aeneid"
     }
@@ -122,6 +134,9 @@
     },
       "tools_url": {
        "Story Auto Upgrade": "https://services.mictonode.com/story-aeneid/auto-update"
+    },
+   "tools_desc": {
+      "Story Auto Upgrade": "A utility to automate node upgrades (binary updates/restarts) for Story Aeneid testnet operators."
     }
 },
   {
@@ -160,6 +175,12 @@
     "Node & Validator Monitoring Script": "https://itrocket.net/services/testnet/story/monitoring/",
     "ITRocket Community Tab for Story Testnet & Mainnet": "https://itrocket.net/services/testnet/story/community/useful-tools/"
     },
+ "tools_desc": {
+      "Validators Performance Dashboard": "A dashboard to compare validator performance and operational reliability over time.",
+      "Public RPC scanner": "A public scanner to test RPC availability/health and quickly spot endpoint issues.",
+      "Node & Validator Monitoring Script": "Monitoring scripts and setup guidance to track node metrics and alert on anomalies.",
+      "ITRocket Community Tab for Story Testnet & Mainnet": "A curated hub of Story resources, tools, and community-run operational links."
+    },
     "content": {
         "Installation Guide": "https://itrocket.net/services/testnet/story/installation/"
     }
@@ -173,6 +194,9 @@
   "tools_url": {
     "Monitoring tool": "https://cryptomolot.gitbook.io/cryptomolot-docs/testnets/story-protocol/monitoring-tool"
   },
+   "tools_desc": {
+      "Monitoring tool": "Monitoring setup and instructions to track node health and key operational signals."
+    },
   "content":{
     "Installation Guide": "https://cryptomolot.gitbook.io/cryptomolot-docs/testnets/story-protocol",
     "Cheatsheet": "https://cryptomolot.gitbook.io/cryptomolot-docs/testnets/story-protocol/cheatsheet"
@@ -196,6 +220,9 @@
      },
      "tools_url": {
         "Story testnet Labs": "https://aeneid.storyscan.app/labs"
+    },
+   "tools_desc": {
+      "Story testnet Labs": "Operations portal for Story Aeneid testnet (install, upgrades, snapshots, and operator resources)."
     }
   },
     {
@@ -205,9 +232,11 @@
     "validatorlogo": "nodesync.jpg",
     "explorer": "",
     "addrbook": "",
-    "tools": "Story testnet Telegram bot",
     "tools_url": {
       "Story testnet Telegram bot": "https://t.me/NS_COSMOS_MONITORING_BOT"
+    },
+    "tools_desc": {
+      "Story testnet Telegram bot": "A Telegram bot to monitor node/validator status and receive quick operational updates."
     }
   },
     {
@@ -227,11 +256,15 @@
      "content": {
         "Installation Guide": "https://noders.services/testnet-networks/story/install"
     },
-    "tools": "CommunityApp,State Sync",
-    "tools_url": {
+   "tools_url": {
        "CommunityApp": "https://ipstoryhub.org/",
        "State Sync": "https://noders.services/testnet-networks/story/statesync"
-    }    
+    },
+   "tools_desc": {
+      "Monitoring": "Monitoring dashboards to track node health and service availability.",
+      "Faucet": "A faucet to request test tokens for Story testnet usage.",
+      "Autoinstall": "One-shot install script to automate Story node setup on the testnet."
+    },
   },
     {
     "name": "Auranode",
@@ -253,6 +286,11 @@
        "Monitoring": "https://monitoring.auranode.xyz/",
        "Faucet": "https://faucet.auranode.xyz/",
        "Autoinstall": "https://raw.githubusercontent.com/hidayahhtaufik/Testnet-Guides/master/Story/auto-install.sh"
+    },
+   "tools_desc": {
+      "Monitoring": "Monitoring dashboards to track node health and service availability.",
+      "Faucet": "A faucet to request test tokens for Story testnet usage.",
+      "Autoinstall": "One-shot install script to automate Story node setup on the testnet."
     },
     "content": {
       "Install guide": "https://auranode.xyz/story-validator/installation"
@@ -282,7 +320,10 @@
      "tools": "Story Sentinel",
     "tools_url": {
        "Story Sentinel": "https://github.com/nodemasterpro/story-sentinel"
-    }   
+    },
+   "tools_desc": {
+      "State-sync": "State sync instructions to bootstrap a node quickly without full historical sync."
+    }
   },
     {
     "name": "OneNov",
@@ -356,6 +397,9 @@
         "tools_url": {
             "validator performance dashboard": "https://story-dashboard.krews.xyz/story-aeneid/validator-status",
             "Decentralization Map": "https://story-dashboard.krews.xyz/story-aeneid/decentralization"
+        },
+      "tools_desc": {
+         "State-sync": "State sync instructions to bootstrap a node quickly without full historical sync."
         }
     },
     {
@@ -382,7 +426,10 @@
      "wss_cosmos": "wss:// story-testnet-rpc.cosmicvalidator.com/websocket",
      "tools_url": {
        "State-sync": "https://github.com/CosmicValidator/Story-Aeneid/blob/main/README.md#state-sync"
-      }
+      },
+    "tools_desc": {
+      "State-sync": "State sync instructions to bootstrap a node quickly without full historical sync."
+    }
     },
     {
     "name": "encipher",
@@ -398,6 +445,10 @@
        "StoryProtocol Network Monitor": "https://geo.story.encipher88.tech",
        "Grafana oneline script": "https://github.com/encipher88/story-grafana"
       },
+     "tools_desc": {
+      "StoryProtocol Network Monitor": "A network monitoring view (often geo-based) to inspect endpoint health and availability.",
+      "Grafana oneline script": "A quick-start script/repo to deploy Grafana monitoring for Story node metrics."
+    },
     "content": {
       "How to Install Grafana Dashboard for Story Network - A Beginner’s Guide": "https://medium.com/@encipher/how-to-install-grafana-dashboard-for-story-network-a-beginners-guide-700269e3290c"
       }  
@@ -440,6 +491,9 @@
     "tools_url": {
           "Buzznodes is an innovation among validator monitoring tools": "https://story.buzznodes.com/"
        },
+    "tools_desc": {
+      "Buzznodes is an innovation among validator monitoring tools": "A monitoring platform focused on validator visibility and performance signals."
+    },
      "content": {
        "Footsteps of Story Validators": "https://drive.google.com/file/d/1vYMvieVCq65JUUy4FvVzoF3CfUAlobYG"
       }  
@@ -486,7 +540,7 @@
         "Useful Commands": "https://services.validexis.com/testnets/story/useful-commands"
     }
   },
-       {
+  {
     "name": "CoinHunters",
     "webservices": "https://service.coinhunterstr.com/testnet/story-protocol/odyssey-testnet",
     "x": "CoinHuntersTR",
@@ -502,6 +556,9 @@
     "content": {
         "Node installation": "https://service.coinhunterstr.com/testnet/story-protocol/odyssey-testnet/installation"
     },
+    "tools_desc": {
+      "Story Node Monitor": "A monitoring page/tooling reference to observe node status and operational health checks."
+    }
     "tools_url": {
         "Story Validator Bot": "https://t.me/storyvalidator_bot"
     }
@@ -521,6 +578,9 @@
     "content": {
       "Node setup guide": "https://docs.blocknth.com/docs/testnet-networks/story/fullnode-setup"
     },
+    "tools_desc": {
+      "Story Node Monitor": "A monitoring page/tooling reference to observe node status and operational health checks"
+    }
     "tools_url": {
       "Story Node Monitor": "https://docs.blocknth.com/docs/tools/chainmonidtor"
     }
@@ -545,6 +605,12 @@
       "Story Installer": "https://github.com/DTEAMTECH/story-installer",
       "Chat GPT assistant for Story Protocol": "https://chatgpt.com/g/g-673b6f19371481919fe8b41d62d0d83d-story-protocol-assistant-by-dteam"
     },
+    "tools_desc": {
+      "state-sync": "State sync endpoints and instructions to speed up node synchronization.",
+      "Story IP Graph Visualization": "A visualization tool for exploring Story IP relationships/graph-style views.",
+      "Story Installer": "An installer repository to automate node setup and common operator steps.",
+      "Chat GPT assistant for Story Protocol": "A guided assistant for Story-related questions (operators/builders) with structured responses."
+    },  
     "content": {
       "Installation Guide": "https://dteam.tech/services/installation-guide/story/testnet"
     }
@@ -570,6 +636,9 @@
     "evm": "",
      "tools_url": {
       "Interactive map for Story nodes": "https://metatarz.xyz/maps/devnet-1"
+    },
+   "tools_desc": {
+      "Interactive map for Story nodes": "An interactive map to explore Story nodes/endpoints visually (often by region or node type)."
     }
 },
    {
@@ -609,6 +678,13 @@
       "Decentralized Peer Monitor": "https://cumulo.pro/services/story-aeneid/peerscan",
       "Story Validator Uptime Proof": "https://github.com/Cumulo-pro/Story_protocol/tree/main/validator-uptime-proof",
       "Story Validator Alerts Bot": "https://cumulo.pro/services/story/monitoring#bot"
+    },
+      "tools_desc": {
+      "Story Metrics and Grafana Dashboard": "Grafana dashboards and Prometheus-based monitoring resources for Story node/validator operations.",
+      "RPC Monitoring Tool": "A tool to test and monitor Story RPC endpoints (latency/uptime) for operators and users.",
+      "Decentralized Peer Monitor": "A distributed peer scanner/monitor to evaluate peer health and connectivity across regions.",
+      "Story Validator Uptime Proof": "Documentation and artifacts to generate/submit uptime proofs for validator programs.",
+      "Story Validator Alerts Bot": "An alerting bot for validator operators (missed blocks, downtime indicators, and key risk signals)."
     },
      "content": {
       "Installation Guide": "https://cumulo.pro/services/story/install",
