@@ -620,7 +620,7 @@
       "Installation Guide": "https://dteam.tech/services/installation-guide/story/mainnet"
     }
 },
-    {
+ {
     "name": "Polkachu",
     "webservices": "https://polkachu.com/networks/story",
     "x": "polka_chu",
@@ -630,6 +630,18 @@
     "evm": "https://storyevm-rpc.polkachu.com/",
     "snapshot": "https://www.polkachu.com/tendermint_snapshots/story",
     "addrbook": "https://www.polkachu.com/addrbooks/story"
+},
+    {
+    "name": "Luganodes",
+    "webservices": "",
+    "x": "luganodes",
+    "validatorlogo": "luganodes.png",
+     "tools_url": {
+      "Story Protocol Ansible Automation": "https://github.com/Luganodes/story-protocol-ansible/tree/main"
+     },
+     "tools_desc": {
+       "Story Protocol Ansible Automation": "This Ansible collection provides comprehensive automation for deploying, managing, and maintaining Story protocol network nodes."
+    }
 },
   {
     "name": "OwlStake",
@@ -674,7 +686,7 @@
       "Useful commands": "https://unitynodes.gitbook.io/unity-nodes/mainnet-network/story-story-1/useful-commands"
     }
 },
-       {
+{
   "name": "cryptomolot",
   "webservices": "https://cryptomolot.gitbook.io/cryptomolot-docs/mainnets/story-protocol",
   "x": "cryptomolot",
