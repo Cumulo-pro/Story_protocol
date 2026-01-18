@@ -119,7 +119,7 @@
     "grpc": "grpc.story.nodestake.org:443",
     "snapshot": "https://nodestake.org/story",
     "snap_url": "", 
-     "archival_snap": "https://nodestake.org/story",
+     "archive_snapshot": "https://nodestake.org/story",
     "addrbook": "https://ss.story.nodestake.org/addrbook.json",
     "evm": "https://evmrpc.story.nodestake.org",
      "content": {
