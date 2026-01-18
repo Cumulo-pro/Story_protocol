@@ -362,7 +362,7 @@
     "explorer": "",
     "peers": "https://services.tienthuattoan.com/mainnet/story/peers-seeds",
     "seeds": "https://services.tienthuattoan.com/mainnet/story/peers-seeds",
-    "api": "m",
+    "api": "",
     "rpc": "",
     "grpc": "",
     "snapshot": "https://services.tienthuattoan.com/mainnet/story/snapshot",
