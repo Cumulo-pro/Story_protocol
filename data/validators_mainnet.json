@@ -393,24 +393,29 @@
 },
    {
   "name": "F5 Nodes",
-  "webservices": "",
+  "webservices": "https://story.f5nodes.com",
   "x": "f5nodes",
   "validatorlogo": "f5nodes.jpg",
   "peers": "",
   "seeds": "",
   "api": "",
-  "rpc": "",
+  "rpc": "https://story-mainnet-rpc.f5nodes.com",
   "grpc": "",
-  "snapshot": "",
+  "snapshot": "https://story.f5nodes.com/",
   "addrbook": "",
   "tools_url": {
        "Story Wiki": "https://wiki.f5nodes.com/story/",
-        "Story Endpoints Ninja" : "https://story.endpoints.ninja/"
+        "Story Endpoints Ninja" : "https://story.endpoints.ninja/",
+        "Decentralization Analytics": "https://story-map.f5nodes.com/"
   },
   "tools_desc": {
-       "Story Wiki": "Community-maintained wiki documenting Story protocol, tooling, and operational knowledge.",
-       "Story Endpoints Ninja": "Directory and testing platform for Story RPC/API endpoints."
-    }
+       "Story Wiki": "A collection of developer resources, troubleshooting tips, validator or community-driven tools and infrastructure",
+       "Story Endpoints Ninja": "Designed to simplify the monitoring and discovery of proven RPC endpoints across the Story network",
+       "Decentralization Analytics": "Interactive 3D visualization tool that provides a global overview of Story’s node distribution."
+    },
+   "content": {
+        "A Comprehensive Guide to Staking and Securing Story L1": "https://blog.f5nodes.com/a-comprehensive-guide-to-staking-and-securing-story-l1/"
+      }
   },
    {
     "name": "Lavender.Five Nodes",
