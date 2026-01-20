@@ -177,7 +177,7 @@
     },
      "tools_desc": {
        "Cosmovisor setup": "Guide to configure Cosmovisor for automated binary management and smoother chain upgrades.",
-       "Monitoring dashboard": "Monitoring setup and dashboards to track Story node/validator health and performance."
+       "Monitoring dashboard": "Monitoring tool for Story node based on Telegraf/InfluxDB/Grafana"
   }
   },
    {
